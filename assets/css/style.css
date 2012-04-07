@@ -1,0 +1,202 @@
+html {
+  background: #F3F3F3;
+}
+body {
+  border-top: 10px solid #3D415D;
+  font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  color: #666;
+  min-width: 960px;
+}
+
+#footer {
+  margin: -6.0em 0.0em 3.0em 1.5em;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 20px;
+  color: #333;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 18px;
+  color: #0084B4;
+}
+
+a:link, a:visited {
+  color: #0084B4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#wrapper {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+#main {
+  height: 400px;
+  text-align: center;
+}
+
+#main, div.header, li.repo {
+  background: white;
+  -moz-box-shadow:    0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow:         0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+#main h1 {
+  margin: 35px 15px 0;
+  font-size: 18pt;
+}
+#main h3 {
+  font-size: 12pt;
+}
+#main h5 {
+  font-size: 10pt;
+}
+
+#main p {
+  margin: 0 10px 100px 10px;
+  font-size: 11pt;
+  line-height: 2;
+}
+
+#logo {
+  width: 200px;
+  height: 200px;
+  margin: 10px 0 0 10px;
+  background: url("../img/scrambled.png");
+  text-indent: -99999px;
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+}
+
+#logo h1 {
+  margin: 0;
+}
+
+div.header {
+  height: 130px;
+}
+
+div.header h1, div.header p {
+  margin: 10px 15px 0;
+}
+
+div.header h1 {
+  margin-bottom: 10px;
+}
+
+div.footer {
+  margin-top: 20px;
+}
+
+#num-repos, #num-members, #num-gists {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0084b4;
+  line-height: 15px;
+}
+
+li.repo {
+  height: 190px;
+}
+
+li.repo > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+li.repo a:hover {
+  background: #eee;
+}
+
+li.repo h2, li.repo h3, li.repo p {
+  margin: 10px 15px;
+}
+
+li.repo h2 {
+  margin-top: 15px;
+  margin-bottom: 2px;
+  max-width: 160px;
+  overflow: hidden;
+}
+
+li.repo h3 {
+  font-size: 11px;
+  margin-top: 2px;
+  margin-bottom: 15px;
+  color: #999;
+}
+
+.repo:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid #000000;
+  border-left: 110px solid #000000;
+  border-right: 110px solid #000000;
+  border-top: 5px solid #000000;
+  pointer-events: none;
+}
+
+.repo.javascript:after {
+  border-top-color: #FFCC44;
+  border-left-color: #FFCC44;
+  border-right-color: #FFCC44;
+  border-bottom-color: #FFCC44;
+}
+
+.repo.coffeescript:after {
+  border-top-color: #FF5599;
+  border-left-color: #FF5599;
+  border-right-color: #FF5599;
+  border-bottom-color: #FF5599;
+}
+
+.repo.python:after {
+  border-top-color: #663399;
+  border-left-color: #663399;
+  border-right-color: #663399;
+  border-bottom-color: #663399;
+}
+
+.repo.java:after {
+  border-top-color: #338899;
+  border-left-color: #338899;
+  border-right-color: #338899;
+  border-bottom-color: #338899;
+}
+
+.repo.ruby:after {
+  border-top-color: #CC2211;
+  border-left-color: #CC2211;
+  border-right-color: #CC2211;
+  border-bottom-color: #CC2211;
+}
+
+.repo.scala:after {
+  border-top-color: #33CC55;
+  border-left-color: #33CC55;
+  border-right-color: #33CC55;
+  border-bottom-color: #33CC55;
+}
+
