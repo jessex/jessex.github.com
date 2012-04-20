@@ -98,6 +98,21 @@ div.header h1 {
   margin-bottom: 10px;
 }
 
+#four {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50em;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px; 
+}
+
 .footer {
   margin-top: 40px;
   margin-left: 240px;
