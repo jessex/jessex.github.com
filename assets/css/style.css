@@ -25,6 +25,14 @@ h2 {
   color: #0084B4;
 }
 
+#return-link {
+  margin-top: 30px;
+}
+
+#return-link h3 {
+  color: #0084B4; 
+}
+
 a:link, a:visited {
   color: #0084B4;
   text-decoration: none;
@@ -75,7 +83,7 @@ a:hover {
   width: 200px;
   height: 200px;
   margin: 10px 0 0 10px;
-  background: url("../img/scrambled.png");
+  background: url("/assets/img/scrambled.png");
   text-indent: -99999px;
   -webkit-border-radius: 50em;
   -moz-border-radius: 50em;
@@ -140,11 +148,11 @@ p.back {
 
 .footer {
   margin-top: 40px;
-  margin-left: 240px;
+  margin-left: 250px;
   height: 4em;
 }
 
-#num-repos, #num-members, #num-gists {
+#num-repos, #num-members, #num-gists, #num-posts {
   font-size: 14px;
   font-weight: bold;
   color: #0084b4;
@@ -175,7 +183,6 @@ li.repo h2, li.repo h3, li.repo p {
 li.repo h2 {
   margin-top: 15px;
   margin-bottom: 2px;
-  max-width: 160px;
   overflow: hidden;
 }
 
@@ -241,4 +248,160 @@ li.repo h3 {
   border-right-color: #33CC55;
   border-bottom-color: #33CC55;
 }
+
+.repo.scheme:after {
+  border-top-color: #006611;
+  border-left-color: #006611;
+  border-right-color: #006611;
+  border-bottom-color: #006611;
+}
+
+.repo.thought-experiment:after {
+  border-top-color: #FFCC44;
+  border-left-color: #FFCC44;
+  border-right-color: #FFCC44;
+  border-bottom-color: #FFCC44;
+}
+
+.repo.life:after {
+  border-top-color: #FF5599;
+  border-left-color: #FF5599;
+  border-right-color: #FF5599;
+  border-bottom-color: #FF5599;
+}
+
+.repo.thoughts:after {
+  border-top-color: #663399;
+  border-left-color: #663399;
+  border-right-color: #663399;
+  border-bottom-color: #663399;
+}
+
+.repo.philosophy:after {
+  border-top-color: #338899;
+  border-left-color: #338899;
+  border-right-color: #338899;
+  border-bottom-color: #338899;
+}
+
+.repo.captains-log:after {
+  border-top-color: #CC2211;
+  border-left-color: #CC2211;
+  border-right-color: #CC2211;
+  border-bottom-color: #CC2211;
+}
+
+.repo.travel:after {
+  border-top-color: #33CC55;
+  border-left-color: #33CC55;
+  border-right-color: #33CC55;
+  border-bottom-color: #33CC55;
+}
+
+.repo.stream-of-consciousness:after {
+  border-top-color: #006611;
+  border-left-color: #006611;
+  border-right-color: #006611;
+  border-bottom-color: #006611;
+}
+
+.repo.programming:after {
+  border-top-color: #CC0077;
+  border-left-color: #CC0077;
+  border-right-color: #CC0077;
+  border-bottom-color: #CC0077;
+}
+
+.repo.story:after {
+  border-top-color: #00CCEE;
+  border-left-color: #00CCEE;
+  border-right-color: #00CCEE;
+  border-bottom-color: #00CCEE;
+}
+
+.repo.rant:after {
+  border-top-color: #CCFF11;
+  border-left-color: #CCFF11;
+  border-right-color: #CCFF11;
+  border-bottom-color: #CCFF11;
+}
+
+
+
+#post {
+
+}
+
+  #post ul,
+  #post ol {
+    margin-left: 1.35em;
+    list-style: disc outside none;
+  }
+  #post li {
+    display: list-item;
+  }
+  
+  #post p {
+    padding-bottom: 14px;
+  }
+  
+  #post h1 {
+    margin-bottom: 6px;  
+  }
+
+  #post h2 {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  #post h3 {
+    color: #333;
+  }
+  
+  #post em {
+    font-style: italic;
+  }
+  
+  #post strong, b {
+    font-weight: bold;
+  }
+  
+  #post blockquote {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    padding-left: 15px;
+    border-left: 3px solid #ccc;
+  }
+  
+  #post blockquote p {
+    padding-bottom: 4px;
+  }
+  
+#image-container {
+  
+}
+    
+  #image-container img {
+    width: 100%;
+    height: auto;
+  }
+
+#archive {
+
+}
+
+#front-page {
+
+}
+
+  #front-page h2 {
+    font-size: 20px;
+    color: #666;
+  }
+  
+  #front-page p {
+    padding-bottom: 14px;
+  }
 

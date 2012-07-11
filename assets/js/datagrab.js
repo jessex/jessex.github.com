@@ -7,7 +7,7 @@
     var $item = $("<li>").addClass("repo grid-1 " + (repo.language || '').toLowerCase());
     var $link = $("<a>").attr("href", repo.html_url).appendTo($item);
     if (repo.fork) {
-        $link.append($("<h2>").text(repo.name).append($("<img>").attr('src', 'assets/img/fork.png')));	
+        $link.append($("<h2>").text(repo.name).append($("<img>").attr('src', '/assets/img/fork.png')));	
     } else {
         $link.append($("<h2>").text(repo.name));
     }        

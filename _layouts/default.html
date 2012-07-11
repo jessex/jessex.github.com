@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="shortcut icon" href="/assets/img/transparent.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <script type="text/javascript" src="/assets/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/datagrab.js"></script>
+    <script type="text/javascript" src="/assets/js/analytics.js"></script>
+  </head>
+  
+  <body>    
+    <div id="wrapper" class="grid clearfix">
+      <div id="main" class="grid-1">
+        <a href="/"><div id="logo"></div></a>
+        <a href="/"><h1>Joshua Essex</h1></a>
+        <h3>Makes code and words</h3>
+        <p>
+          <a href="http://www.flickr.com/photos/metaphysic/">and neat photographs</a><br />
+          <a href="/code"><span id="num-repos">&nbsp;</span> repositories</a><br />
+          <a href="/blog"><span id="num-posts">43</span> posts</a>
+        </p>
+      </div>
+
+      {{ content }}
+    </div>
+  </body>
+</html>
+
