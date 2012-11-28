@@ -7,9 +7,9 @@ category: travel
 tags: 
 - Travel Log
 ---
-A bounty of photographs of my journey can be found on <a href="http://www.flickr.com/photos/metaphysic/sets/72157632099632191/with/8219982020/">Flickr</a>.
+A bounty of photographs of my journey can be found on [Flickr](http://www.flickr.com/photos/metaphysic/sets/72157632099632191/with/8219982020/ "Flickr").
 
-# Departure
+<p><span style="font-size: medium;"><strong>Departure</strong></span></p>
 
 
 I am currently in route to Portland, and believe that I am somewhere over Iowa or thereabout. This is the second tour-style trip of the year, but it is much reduced in scope compared to the European excursion in May. 8 days, 3 cities (Portland, Seattle, Vancouver), 2 countries.
@@ -31,7 +31,7 @@ Should be just a few more hours now. I'll evade the screaming baby with some mus
 P.S. The Big Dipper looks like it's almost at eye level, riding just over the wing. Terrific.  
      
 
-# Portland
+<p><span style="font-size: medium;"><strong>Portland</strong></span></p>
 
 
 I am sitting in the train station waiting on the 12:45pm to Seattle. Seated across from me is a young family: a mother and father likely in their high 20s or low 30s, two toddler girls, and a baby girl. The father seems contemptuous of his children and cold toward the mother. The mother seems overwhelmed and her child-rearing mechanism is to tell the girls to sit down and watch the portable DVD player.
@@ -84,7 +84,7 @@ Now I sit on the train en route to Seattle. Until next time, Portland.
   
 
 
-# Olympic National Park
+<p><span style="font-size: medium;"><strong>Olympic National Park</strong></span></p>
 
 
 Happy Thanksgiving! My feast was a chicken bacon ranch melt from Subway. Yummy. More importantly, I am thankful for the kind, thoughtful, loving people in my life and the fortune that has befallen me throughout these twenty-three years.
@@ -125,7 +125,7 @@ But, much more importantly, the day taught me a lesson: I'm a nature boy at hear
 
 
 
-# Vancouver
+<p><span style="font-size: medium;"><strong>Vancouver</strong></span></p>
 
 
 The next day's adventure in Vancouver would only reinforce this sentiment, though from the opposite perspective. I spent only eight or so hours in Vancouver and saw a miniscule portion of the city, confined mostly to downtown. I did not get to visit some of its most charming neighborhoods nor its lovely natural surroundings. It was grey and overcast and I was alone. So the following is unfair, but it's what I feel: I do not like Vancouver.
@@ -144,8 +144,7 @@ C'est la vie.
   
 
 
-# Seattle
-
+<p><span style="font-size: medium;"><strong>Seattle</strong></span></p>
 
 I walked to the lot overlooking the Puget Sound near the corner of 1st and University and had one last look, one brief moment of reflection. I then took the light link rail to the airport, where I sit now. Thus, my visit to Seattle, and to the Pacific Northwest, comes to a close. 
 
