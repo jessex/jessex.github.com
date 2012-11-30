@@ -5,8 +5,8 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
   <title>Jessex.ch</title>
-  <link href="http://jessex.ch/feed/" rel="self"/>
-  <link href="http://jessex.ch/"/>
+  <link type="application/atom+xml" href="http://jessex.ch/feed/" rel="self"/>
+  <link type="text" href="http://jessex.ch/" rel="alternate"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>http://jessex.ch/</id>
   <author>
@@ -14,7 +14,7 @@ layout: nil
     <email>essexjosh@gmail.com</email>
   </author>
 
-  {% for post in site.posts %}
+  {% for post in site.posts limit:5 %}
     <entry>
       <title>{{ post.title }}</title>
       <link href="http://jessex.ch{{ post.url }}"/>
@@ -25,4 +25,3 @@ layout: nil
   {% endfor %}
  
 </feed>
-
