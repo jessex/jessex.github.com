@@ -42,7 +42,8 @@ While sitting on Ocean Beach, waiting for the sun to set, I tried to capture my 
 * Couples with dogs, everywhere. And kids.
 * Biked here in a makeshift, ad hoc, caravan youth movement. Crazy.
 * Hard to tell locals apart from tourists here. At leisure, it's all the same. Not that it matters. Every one's a tourist somewhere. But are we all locals? Don't really feel like a local anywhere.
-* High tide is wild. Massive sprays of white ocean when waves begin to break. "Don't know each other, but we both know this is a great fucking moment. Look at the ocean!"
+* High tide is wild. Massive sprays of white ocean when waves begin to break. 
+* Love it when strangers exchange smiles. "We don't know each other, but we both know this is a great fucking moment. Look at the ocean!"
 * Two dogs break into chase and playful scrapping. Every other dog notices. Which ones join in the fray? Fascinating to see.
 * A kite!
 * Four guys play frisbee fetch with another guy's dog. Every one is pleased with the outcome.
@@ -55,4 +56,4 @@ On the flight back East, I existed in past, present, and future. I reflected on 
 
 <p/>
 <p/>
-Capping off the trip: somewhere over Missouri, the pilot spoke to us over the intercom: “Uh, attention ladies and gentlemen. This is pretty amazing: in about ten seconds, you’ll see a trail of space debris flying through the sky off to the right side of the plane. In twenty years as a pilot, I’ve never seen anything like it.” I happened to have a window seat on the right, southern-facing side of the plane. A few seconds later, like a white-orange comet, it came into view. Everyone rushed to the right side of the plane to crowd over us with window-views to see it. For a few seconds, we watched something man-made that had fallen out of orbit burn up as it collided toward the Earth. Then, it was gone. We all went back to our respective headphones and bags of pretzels.
+Capping off the trip: somewhere over Missouri, the pilot spoke to us over the intercom: "Uh, attention ladies and gentlemen. This is pretty amazing: in about ten seconds, you'll see a trail of space debris flying through the sky off to the right side of the plane. In twenty years as a pilot, I've never seen anything like it." I happened to have a window seat on the right, southern-facing side of the plane. A few seconds later, like a white-orange comet, it came into view. Everyone rushed to the right side of the plane to crowd over us with window-views to see it. For a few seconds, we watched something man-made that had fallen out of orbit burn up as it collided toward the Earth. Then, it was gone. We all went back to our respective headphones and bags of pretzels.
