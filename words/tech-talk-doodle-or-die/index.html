@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        jessex // Tech Talk: Doodle or Die
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../assets/img/transparent.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css">
+    <link rel="stylesheet" href="../../assets/css/jessex.css">
+    <script type="text/javascript" src="../../assets/js/analytics.js"></script>
+</head>
+
+<body class="w-100 avenir">
+<header class="w-100 pa3 ph5-ns bg-white" id="top">
+    <div class="db dt-ns mw9 center w-100">
+        <div class="db dtc-ns v-mid tl w-50">
+            <a href="/" class="dib f5 f4-ns fw6 mt0 mb1 link black-70" title="Home">
+                Joshua Essex
+            </a>
+        </div>
+        <nav class="db dtc-ns v-mid w-100 tl tr-ns mt2 mt0-ns">
+            <a title="Where we started" href="../../"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Home
+            </a>
+            <a title="Places I have been" href="../../places/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Places
+            </a>
+            <a title="Projects I have worked on" href="../../projects/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Projects
+            </a>
+            <a title="Photos I have taken" href="../../photos/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Photos
+            </a>
+            <a title="Words I have written" href="../../words/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Words
+            </a>
+            <a title="Where I do my part" href="../../opower/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Opower
+            </a>
+            <a title="What I have done" href="../../assets/img/Joshua-Essex-2017-Resume.pdf"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Resume
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main class="w-100 bt b--black-10 bg-white">
+    <section class="bg-black-0125 w-100">
+        <article class="bt b--black-10 bg-white black-70 ph3 ph5-ns pv4 pv5-ns">
+            <h1 class="f4 fw6 f1-ns lh-title measure mt0">Tech Talk: Doodle or Die <span class="f6 f5-ns black-40 normal pl4">26-11-2012</span></h1>
+            <div class="ph2 pb4 pv2 f6 f5-ns lh-copy mt0">
+                <p>
+                    On November 1, I gave a tech talk with the <a href="http://michiganhackers.org/" title="Michigan Hackers">Michigan Hackers</a> group at the University of Michigan. Specifically, I spoke about the tech stack behind <a href="http://doodleordie.com/" title="Doodle or Die">Doodle or Die</a>, the completely, absurdly hilarious game of "telephone" with drawings. I spoke for just an over an hour about the core of our stack, namely: <a href="http://nodejs.org/" title="Node.js">Node.js</a>, <a href="http://expressjs.com/" title="Express.js">Express.js</a>, <a href="http://www.mongodb.org/" title="MongoDB">MongoDB</a>, and <a href="http://aws.amazon.com/s3/" title="Amazon S3">Amazon S3</a>. We shared some laughs and we learned some cool things.
+                </p>
+                <p>
+                    A video of the presentation can be seen below, courtesy of the Michigan Hackers YouTube channel:
+                </p>
+                <p>
+                    <iframe width="700" height="394" src="http://www.youtube.com/embed/gG8M2emVTH0" frameborder="0">https://github.com/mojombo/jekyll/issues/346</iframe>
+                </p>
+                <p>
+                    The slideware that I roll through in the presentation can be found on <a href="https://github.com/jessex/doodle-tech" title="doodle-tech">Github</a> <a href="https://github.com/jessex/doodle-tech/raw/master/doodletech.pdf" title="doodletech.pdf">(direct download)</a>.
+                </p>
+                <p>
+                    I had an amazing time giving the talk: the group definitely seemed to be into the subject matter and there was a pretty good turnout, given the fact that we sort of organized the talk at the last minute. Michigan Hackers certainly know how to put on a party.
+                </p>
+                <p>
+                    But somewhat unexpectedly, even though I was the one giving the talk, I learned a ton. Not just about giving a technical presentation, though there were certainly many lessons to be learned along that front, but also about the subject matter itself. I am still relatively new with all of this technology--I've been working on Doodle or Die for only a few months, and I had negligible exposure to the precise stack beforehand--and the process of constructing the presentation was a great way to gain more knowledge of and experience with the actual software. Working off of my prior experience in web development (albeit with different tech stacks) and my still nascent experience with Node/Express/Mongo, I was able to construct a general skeleton that I wanted to take the talk in, filling in the gaps with further research and experimentation.
+                </p>
+                <p>
+                    To say that I now know at least twice as much about the tech that we use at Doodle or Die than I did before building and giving the talk would not be a stretch. It would likely be an understatement. Just like writing a professor-granted "cheat sheet" for an exam in college compels you to study, composing a presentation for a tech talk compels you to refine your own technical expertise.
+                </p>
+                <p>
+                    As for the actual quality of the talk, I would assess myself positively. I believe that I did a good job of striking a balance between breadth and depth. The audience is composed of college students with, in general, little experience in web development or the technology. As such, I tried not to get too bogged down in technical details, providing a surface examination of the higher-level concepts and penetrating into greater detail where appropriate and necessary. For instance, going deeper into the concept of event-driven, asynchronous concurrency was critical for understanding Node, even though there is a somewhat steep learning curve. (Aside: <a href="http://berb.github.com/diploma-thesis/original/055events.html#st" title="Event-driven Concurrency">this thesis</a> by Benjamin Erb contains a fantastic case study on Node's model of concurrency.)
+                </p>
+                <p>
+                    I think that I did the material justice and presented a clear and accurate portrait of the technology behind Doodle or Die.
+                </p>
+                <p>
+                    Furthermore, I think that I was successful in keeping the audience entertained and focused. The little injections of actual doodles kept the laughs roaring, as did the interludes which helped provide a bit of a break between the intensive portions of the talk. The live doodling interlude was particularly awesome, when Adam Williams live-doodled <a href="http://doodleordie.com/c/1GC8QR6fG1" title="A Roman Soldier">step 8 of this chain</a> and Ian Paschal followed up with <a href="http://doodleordie.com/c/8qKkaQJKG5" title="Bob Ross">step 1 of this chain</a>. Pure hilarity.
+                </p>
+                <p>
+                    And the feedback that I have received has been highly positive and supportive, with some very helpful constructive criticism.
+                </p>
+                But there are areas where I can and should improve. Namely:
+                <ul>
+                    <li>I need to project more. Though it may not seem like a significant issue on the video, the truth is that I am typically a pretty low, quiet talker. There were a few times where my voice sort of trailed off at the end of sentences, and where I simply did not speak loud enough.</li>
+                    <li>I need to be more consistent in sustaining eye contact. In general, this is a strong suit of mine. In one on one conversation and when speaking to a group, I do a pretty good job of maintaining a healthy amount of eye contact. But at times, particularly when going into greater technical detail or walking through some sample code, I tended to focus more on the slide or on some invisible shapes and colors in a conceptual plane that I zone off into. I have to maintain consistency with eye contact throughout, particularly in the more technically involved sections.</li>
+                    <li>I need to cut back on the self-deprecation. My personal brand of humor is often self-deprecating, dry, and dark. A handful of my jokes and off-the-cuff remarks during the talk followed this model. It is not entirely appropriate for a presentation of this sort, where the audience has agreed to pay attention under the premise that I am an expert and that subsequently they will learn. Cutting myself down or short-selling my own knowledge gives off the wrong impression.</li>
+                    <li>I need to make fewer assumptions about the knowledge and experience of the audience. As previously mentioned, I was speaking to a group without much expertise in the subject matter. There were multiple points where I not only assumed that every one knew what I was talking about, but I editorialized the concept with an "obviously" or a "hopefully everyone has seen this". The former can decrease the educational value of the presentation and the latter can come off as just plain rude. There were times where I stopped to explain a particular point, such as atomicity of database transactions or HTTP verbs and routing, but there were times where I erroneously assumed that there had been prior exposure, such as to JSON. I have to continue to keep the entire audience in step with the material.</li>
+                    <li>And finally, a question to ponder: do I need to keep tighter control on the presentation? The live-doodling interlude in the presentation ran on for a bit longer than I would have liked and the talk got a tad bit unwieldy. I like to keep the presentation tight and evenly paced; I like to establish a consistently brisk flow. I absolutely would not remove the interlude in retrospect: I think it was completely hilarious and it helped to showcase the fun to be had with Doodle or Die. But perhaps keeping that interlude slightly more controlled would have been beneficial. Then again, whatever! It was fun!</li>
+                </ul>
+                <p>
+                If you watch the video or go through the slideware and have comments, critiques, or corrections, feel free to let me know!
+                </p>
+                <p>
+                This was an absolute blast! I only hope that I helped to educate and to get some up-and-coming developers excited about the world on the Web. And if a few more folks become Doodlers, then all the better.
+                </p>
+                <p>
+                I extend a humongous thank you to the Michigan Hackers and the University of Michigan for giving me the chance to speak about exciting stuff with great people!
+                </p>
+            </div>
+        </article>
+    </section>
+</main>
+
+<footer class="bg-white black-70 ph3 ph5-ns pv5 bt b--black-10">
+    <div class="mw9 center">
+        <div class="lh-copy">
+            <a title="Places you have been" href="#top"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Back up top
+            </a>
+            <a title="Where we started" href="../../"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Home
+            </a>
+            <a title="Places I have been" href="../../places/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Places
+            </a>
+            <a title="Projects I have worked on" href="../../projects/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Projects
+            </a>
+            <a title="Photos I have taken" href="../../photos/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Photos
+            </a>
+            <a title="Words I have written" href="../../words/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Words
+            </a>
+            <a title="Where I do my part" href="../../opower/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Opower
+            </a>
+            <a title="What I have done" href="../../assets/img/Joshua-Essex-2017-Resume.pdf"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Resume
+            </a>
+        </div>
+        <div class="mt4">
+            <a class="ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3" href="https://www.linkedin.com/in/joshuaessex/" title="Where I link">
+                <div class="w2">
+                    <svg style="fill: #B5DBCE" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"/></svg>
+                </div>
+            </a>
+            <a class="ba br2 black-70 no-underline grow b inline-flex items-center mb3 pv2 ph3" href="https://github.com/jessex" title="Where I git">
+                <div class="w2">
+                    <svg style="fill: #B5DBCE" aria-labelledby="title" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </div>
+            </a>
+        </div>
+        <p class="f6 measure copy lh-copy">
+            Made with <a href="http://tachyons.io/" title="Shout out to some old friends">Tachyons</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

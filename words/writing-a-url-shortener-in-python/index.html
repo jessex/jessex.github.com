@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        jessex // Writing a URL Shortener in Python
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../assets/img/transparent.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css">
+    <link rel="stylesheet" href="../../assets/css/jessex.css">
+    <script type="text/javascript" src="../../assets/js/analytics.js"></script>
+</head>
+
+<body class="w-100 avenir">
+<header class="w-100 pa3 ph5-ns bg-white" id="top">
+    <div class="db dt-ns mw9 center w-100">
+        <div class="db dtc-ns v-mid tl w-50">
+            <a href="/" class="dib f5 f4-ns fw6 mt0 mb1 link black-70" title="Home">
+                Joshua Essex
+            </a>
+        </div>
+        <nav class="db dtc-ns v-mid w-100 tl tr-ns mt2 mt0-ns">
+            <a title="Where we started" href="../../"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Home
+            </a>
+            <a title="Places I have been" href="../../places/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Places
+            </a>
+            <a title="Projects I have worked on" href="../../projects/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Projects
+            </a>
+            <a title="Photos I have taken" href="../../photos/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Photos
+            </a>
+            <a title="Words I have written" href="../../words/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Words
+            </a>
+            <a title="Where I do my part" href="../../opower/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Opower
+            </a>
+            <a title="What I have done" href="../../assets/img/Joshua-Essex-2017-Resume.pdf"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Resume
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main class="w-100 bt b--black-10 bg-white">
+    <section class="bg-black-0125 w-100">
+        <article class="bt b--black-10 bg-white black-70 ph3 ph5-ns pv4 pv5-ns">
+            <h1 class="f4 fw6 f1-ns lh-title measure mt0">Writing a URL Shortener in Python <span class="f6 f5-ns black-40 normal pl4">29-03-2011</span></h1>
+            <div class="ph2 pb4 pv2 f6 f5-ns lh-copy mt0">
+                <p>I often find that I have miniature curiosity itches that I want to scratch, questions about how something works that I need to find the answer to. Recently, I realized that I had never given any thought to how <a href="http://en.wikipedia.org/wiki/URL_shortening" title="URL Shortening">URL shorteners</a> work. I have been using TinyURL since at least 2006 and more recently have used bit.ly a fair deal and I suddenly realized this past week that I wanted to know how one goes about building a shortening service. For many of us, the best way to learn something is to get our hands dirty and just build.</p>
+                <p>And as it turns out, a basic URL shortener is not terribly difficult or intimidating. I had fun building a little imaginary shortener, <span style="font-size: small;">th</span>ough I have no intention of placing it online because there are just way too many of these already. So I figured I would document some steps in building a basic URL shortening engine for anyone who may have this same curiosity some day. </p>
+                <h2 class="f4">How it Works</h2>
+                <p>This little proof of concept is quite basic and does not feature some of the frills of today's popular shorteners, such as personalized links or more randomized codes. Essentially, what we do is take in a URL, insert it into a database, get the auto-incrementing row id of this insert (an integer, of base 10) and perform a base conversion on this to base 56. We specifically convert to base 56 because of our URL code alphabet, which consists of all lower case letters, all upper case letters and the digits 0-9, except for o, O, 0, I, l and 1 due to the similarity in appearance for these characters. Once we convert the decimal id into a combination of these characters, we append the new code to the end of our imaginary URL, "http://shr.tn/" (let's pretend .tn is a Top Level Domain) and return this to the user. So something like "http://jessex.ch/blog/writing-a-url-shortener-in-python.html" can become something like "http://shr.tn/j8Kin3".</p>
+                <p>Some effects of the design of this system include:</p>
+                <ul>
+                    <li>shortened URLs will increase in length as more URLs are added into the system, with the first 56 URLs having only one character in the code, the next 56*56 URLs after that having only two characters in the code, etc.</li>
+                    <li>identical URLs will have one shortened link, which is to say if someone attempts to shorten "http://example.com/" some three months after someone else already did this, they will receive the same link as the first person</li>
+                    <li>9,223,372,036,854,775,808 distinct URLs can be shortened by our service without altering its structure, due to the fact that the largest possible auto-incrementing row id in SQLite (our database of choice) is 9,223,372,036,854,775,807</li>
+                </ul>
+                <p>When a user enters a shr.tn link into their browser and reaches our server, we will do the inverse of our shortening action: convert the base 56 code to a base 10 integer and look up the row in our database with that integer as its id. This is the original, "long" URL which our service will issue a <a href="http://en.wikipedia.org/wiki/URL_redirection" title="URL Redirection">301 re-direct</a> to. Easy squeezy.</p>
+                <h2 class="f4">Implementation</h2>
+                <p>Writing this basic system does not take a great deal of work [when we completely disregard the front end]. The source code for the backend, written entirely in Python and with plenty of commenting and white space, takes only ~175 lines of code. We separate the engine into two separate modules (shrtn.py and database.py) which handle the actual shortening/lengthening and database operations, respectively.</p>
+                <p>Implementing a database adapter for our service is made much easier by the <a href="http://docs.python.org/library/sqlite3.html" title="sqlite3 - DB-API 2.0 interface for SQLite databases">sqlite3 module</a>, which provides the basics for connecting to our database and executing our queries. The first thing we do to work with our database is to establish a connection:</p>
+                <p><script src="https://gist.github.com/3080996.js?file=database_setup.py"></script></p>
+                <p>This function will attempt to open the SQLite database file, stored at the path pointed to by "location", and will return a Connection object, which essentially acts as our database within the system. We will use this object for all database operations, including searches for row id's (when we lengthen shortened URLs) and searches for already entered URLs (when we shorten long URLs):</p>
+                <p><script src="https://gist.github.com/3080996.js?file=database_search.py"></script></p>
+                <p>In these two functions, we enter very basic queries and call the <em>execute()</em> method of the Connection object. Here is one trick where the sqlite3 module comes in handy: in most database APIs, you use a Cursor object, taken from the database object, to execute queries (something which you can do in this module, too). However, the module allows us to call these shortcut methods for execution directly on the Connection object: it creates a cursor implicitly and returns it from the <em>execute()</em> call. This allows us to a) stay concise by avoiding superfluous code, b) stay as modular as possible while avoiding having to pass around a Cursor object into our functions as parameters and c) iterate over query results more efficiently.</p>
+                <p>With both functions, we construct a query, execute it directly on the Connection object and retrieve a list of results, each of which is a 2-tuple corresponding to the table columns (row id and original URL). If there are no results, we just return false. Otherwise, we take the first result tuple (because we <em>should</em> only have one result for these queries due to the design of the system) and unpack the value that we want. Note that in <em>search_id()</em> we pass the URL into the <em>str()</em> function because it is stored in SQLite as Unicode.</p>
+                <p>However, these database functions are useless for our purposes without being called by our actual shortening engines. When a user enters a URL to shorten, we pass it into the <em>shorten_url()</em> function in shrtn.py, along with our Connection object, which cleans the URL up a bit, if necessary, and checks for its existence in our database. If it is already entered, we use that row id for our conversion. Otherwise, we insert the URL into our database (with the <em>insert_url()</em> function in database.py) and then use <em>that</em> row id. Both functions are shown below:</p>
+                <p><script src="https://gist.github.com/3080996.js?file=urls.py"></script></p>
+                <p>Lengthening a url is accomplished when a user points their browser to one of our shortened URLs. When the request reaches the server, our <em>lengthen_url()</em> function is called with our Connection object:</p>
+                <p><script src="https://gist.github.com/3080996.js?file=lengthen.py"></script></p>
+                <p>With this function, we convert the code to a decimal row id and search for it in the database, returning the original, "long" URL found at that row. If that row was not found in the database, then the code was never actually generated and the link is incorrect: thus, we return a 404 error. We do the same in the event that the shortened URL is improperly formatted. But none of these functions address the actual conversions between decimal row id and shortened base 56 code.</p>
+                <h2 class="f4">Shortening and Lengthening URLs</h2>
+                <p>The actual shortening of URLs is simply a conversion between a decimal integer and a base 56 string of text from our alphabet of characters.</p>
+                <p><script src="https://gist.github.com/3080996.js?file=convert.py"></script></p>
+                <p>We pass in the row id and, optionally, an alphabet of eligible characters. If omitted, we simply use our own default alphabet: "abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789". The process is essentially to continually divide our id down by our base of 56, mapping the symbols of the conversion to the alphabet. For instance, to convert a row id of 150, we notice that 56 * 2 = 112 with 38 to go before 150. This gives us symbols of [2] and [38] which point to the characters of 'c' and 'Q' in our alphabet. Thus, 150 converts to "cq" in our system. We generate these characters in reverse order, so we reverse the list and convert it to a string to return.</p>
+                <p>The inverse of this operation, resolving a code to a decimal id, involves reading the characters of the code one by one and mapping each to its own individual decimal value. These are summed up and the total id is returned. This is shown below:</p>
+                <p><script src="https://gist.github.com/3080996.js?file=resolve.py"></script></p>
+                <h2 class="f4">Conclusions</h2>
+                <p>And that's it. The process of creating and reading back our shortened URL codes requires only two functions, with only some ten lines of source code. The meat and potatoes of the process for this basic URL shortener was really that easy. Do a little conversion. Execute some queries on a one table database. Sip some lemonade and watch the URLs shorten before your eyes. Curiosity sated.</p>
+                <p>The rest of our little engine is rounded out with some functions for things like URL validation (I use that term extremely lightly) and some always exciting <a href="http://docs.python.org/library/re.html" title="re - Regular expression operations">regular expressions</a>. The full source code can be examined <a href="https://github.com/jessex/shrtn" title="jessex/shrtn">on Github</a> which includes a test rig (adequately named testrig.py) that has a handful of unit tests. A read me file is included for anyone interested in setting the engine up locally.</p>
+            </div>
+        </article>
+    </section>
+</main>
+
+<footer class="bg-white black-70 ph3 ph5-ns pv5 bt b--black-10">
+    <div class="mw9 center">
+        <div class="lh-copy">
+            <a title="Places you have been" href="#top"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Back up top
+            </a>
+            <a title="Where we started" href="../../"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Home
+            </a>
+            <a title="Places I have been" href="../../places/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Places
+            </a>
+            <a title="Projects I have worked on" href="../../projects/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Projects
+            </a>
+            <a title="Photos I have taken" href="../../photos/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Photos
+            </a>
+            <a title="Words I have written" href="../../words/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Words
+            </a>
+            <a title="Where I do my part" href="../../opower/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Opower
+            </a>
+            <a title="What I have done" href="../../assets/img/Joshua-Essex-2017-Resume.pdf"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Resume
+            </a>
+        </div>
+        <div class="mt4">
+            <a class="ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3" href="https://www.linkedin.com/in/joshuaessex/" title="Where I link">
+                <div class="w2">
+                    <svg style="fill: #B5DBCE" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"/></svg>
+                </div>
+            </a>
+            <a class="ba br2 black-70 no-underline grow b inline-flex items-center mb3 pv2 ph3" href="https://github.com/jessex" title="Where I git">
+                <div class="w2">
+                    <svg style="fill: #B5DBCE" aria-labelledby="title" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </div>
+            </a>
+        </div>
+        <p class="f6 measure copy lh-copy">
+            Made with <a href="http://tachyons.io/" title="Shout out to some old friends">Tachyons</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>
