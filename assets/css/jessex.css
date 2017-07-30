@@ -1,0 +1,133 @@
+.graph-legend li span {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    float: left;
+    margin-top: 4px;
+    margin-right: 8px;
+}
+.graph-legend {
+    list-style: none;
+    margin-top: 10px;
+}
+.graph-legend li {
+    margin-bottom: 10px;
+    width: 200px;
+    display: inline-block;
+    zoom: 1;
+}
+
+.center-project {
+    margin: 0 auto;
+}
+
+.project-title {
+    text-transform: none;
+    margin: 10px auto 0;
+    text-align: center;
+}
+
+.clemencharts {
+    font-family:"Arvo",serif;
+}
+.clemencharts-front {
+    color:#FF5959;
+}
+.clemencharts-back {
+    color:#6EC5E9;
+}
+
+
+.bg-jessex-washed-blue {
+    background-color:#EFFDF9;
+}
+.bg-jessex-washed-green {
+    background-color:#F5FEF0;
+}
+.bg-jessex-washed-orange {
+    background-color:#FFF5F1;
+}
+.bg-jessex-washed-purple {
+    background-color:#F2F1FD;
+}
+.bg-jessex-washed-red {
+    background-color:#FFF0F4;
+}
+.jessex-washed-red {
+    color:#EFBDC9;
+}
+.jessex-dark-blue {
+    color:#479F82;
+}
+.jessex-blue {
+    color:#8BE0C4;
+}
+.jessex-light-blue {
+    color:#AAEFD8;
+}
+.jessex-dark-red {
+    color:#DB627E;
+}
+.jessex-red {
+    color:#F899AF;
+}
+.jessex-light-red {
+    color:#FBB2C3;
+}
+.bg-jessex-dark-blue {
+    background-color:#479F82;
+}
+.bg-jessex-blue {
+    background-color:#8BE0C4;
+}
+.bg-jessex-light-blue {
+    background-color:#AAEFD8;
+}
+.bg-jessex-dark-red {
+    background-color:#DB627E;
+}
+.bg-jessex-red {
+    background-color:#F899AF;
+}
+.bg-jessex-light-red {
+    background-color:#FBB2C3;
+}
+
+
+
+.bg-abyss {
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/abyss.png');
+}
+.bg-bye {
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/jessex/DSC_8944.jpg');
+}
+.bg-clementosh {
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/clementosh/DSC_8772.jpg);
+}
+.bg-hembakat {
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/jessex/IMG_20170721_220355.jpg');
+}
+.bg-nursery {
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/jessex/IMG_20160127_091619.jpg');
+}
+.bg-visual {
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/sample.gif');
+}
+.bg-volumes {
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/volumes.jpg');
+}

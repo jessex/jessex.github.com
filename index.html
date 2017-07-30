@@ -1,23 +1,748 @@
----
-layout: default
-title: Joshua Essex is a Person
----
-<div id="front-page" class="grid-3">
-<h2>I am Joshua. I am a person.</h2>
-<p>&nbsp;</p>
-<h3>
-<p>Some of the things that roll around the recesses of my mind are theories of consciousness, physics of the universe, and philosophies of everything. I can usually be found in the abstract.</p>
-<p>Some of the things that I am passionate about are protecting our planet, volunteering to good causes, supporting the freedom and equality of us all, and standing up for principle.</p>
-<p>Less sanctimoniously, I enjoy traveling the globe, returning to nature, tinkering with cameras, reading and writing words, jamming to funky music, learning about people, and pushing bits around digital landscapes. I also play a mean <a href="http://en.wikipedia.org/wiki/Kalimba" title="Thumb piano">kalimba</a>.</p>
-<p>My time is spent trying new things and rediscovering that which I have forgotten. I'm trying to learn both Portuguese and French. I'm rediscovering my Spanish. I'm trying to learn how to surf. I'm rediscovering my skateboard, my basketball, and my Super Nintendo.</p>
-<p>The relentless itch to help people is being scratched at <a href="http://opower.com/" title="Opower">Opower</a>, where my cohorts and I are saving the planet by reducing energy consumption, one household at a time, all around the world, with amazing software. I am but a humble member of our team of brilliant, crazy engineers.</p>
-<p>&nbsp;</p>
-<p>I open source all of my personal projects on <a href="https://github.com/jessex" title="jessex">Github</a>.</p>
-<p>I muse on anything and everything on <a href="/blog" title="Blog">this very site</a>.</p>
-<p>I organize my photographic adventures on <a href="http://www.flickr.com/photos/metaphysic/" title="meta.physic">Flickr</a>.</p>
-<p>I host awesome dance parties on <a href="http://www.rdio.com/people/jessex/" title="jessex">Rdio</a>.</p>
-<p>You can <a href="http://feedburner.google.com/fb/a/mailverify?uri=jessex&amp;loc=en_US" title="Feedburner">subscribe to my blog</a>!</p>
-<p>I like <a href="http://qwantz.com/index.php" title="Dinosaur Comics">dinosaurs</a>.</p>
-</h3>  
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        jessex
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./assets/img/transparent.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css">
+    <link rel="stylesheet" href="assets/css/jessex.css">
+    <link rel="stylesheet" href="./assets/css/timeline.css">
+    <script type="text/javascript" src="./assets/js/analytics.js"></script>
+    <script type="text/javascript" src="./assets/js/chart.min.js"></script>
+</head>
 
+<body class="w-100 avenir">
+<header class="w-100 pa3 ph5-ns bg-white" id="top">
+    <div class="db dt-ns mw9 center w-100">
+        <div class="db dtc-ns v-mid tl w-50">
+            <a href="/" class="dib f5 f4-ns fw6 mt0 mb1 link black-70" title="Home">
+                Joshua Essex
+            </a>
+        </div>
+        <nav class="db dtc-ns v-mid w-100 tl tr-ns mt2 mt0-ns">
+            <a title="Where we started" href="/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Home
+            </a>
+            <a title="Places I have been" href="/places/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Places
+            </a>
+            <a title="Projects I have worked on" href="/projects/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Projects
+            </a>
+            <a title="Photos I have taken" href="/photos/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Photos
+            </a>
+            <a title="Words I have written" href="/words/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Words
+            </a>
+            <a title="Where I do my part" href="/opower/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Opower
+            </a>
+            <a title="What I have done" href="./assets/img/Joshua-Essex-2017-Resume.pdf"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Resume
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main class="w-100 bt b--black-10 bg-white">
+    <section class="bg-black-0125 w-100">
+        <article class="pb4 bg-jessex-washed-red">
+            <header class="ph3 ph5-ns w-100 bg-white pv3 mb2-ns bb b--black-10 overflow-auto">
+                <div class="nowrap mw9 center">
+                    <a title="Who I am" href="#overview"
+                       class="pv1-ns f6 fw6 dim link black-70 mr1 mr3-m mr4-l dib">
+                        Overview
+                    </a>
+                    <a title="What I believe in" href="#core-ideas"
+                       class="pv1-ns f6 fw6 dim link black-70 mr2 mr3-m mr4-l dib">
+                        Core ideas
+                    </a>
+                    <a title="What I can do" href="#abilities"
+                       class="pv1-ns f6 fw6 dim link black-70 mr1 mr3-m mr4-l dib">
+                        Abilities
+                    </a>
+                    <a title="What I like" href="#preferences"
+                       class="pv1-ns f6 fw6 dim link black-70 mr1 mr3-m mr4-l dib">
+                        Top 5
+                    </a>
+                </div>
+            </header>
+            <div class="ph3 ph5-ns">
+                <div class="cf mw9 center tc-m">
+                    <div class="pb3 pb4-ns pt5-l mt4 black-70 fl-l w-50-l">
+                        <h1 class="f4 fw6 f1-ns lh-title measure mt0">
+                            Hi.
+                        </h1>
+                        <p class="f5 f4-ns fw4 b measure dib-m lh-copy">
+                            I'm an engineer trying to tackle society's big problems.
+                            I'm a person trying to support society's most vulnerable people.
+                            I'm an underrated samba dancer. I only live in cities that start
+                            with the letter S.
+                        </p>
+                    </div>
+                    <div class="fl-l w-50-l tl tc-ns pt3 pt4-m pt5-l">
+                        <img class="br-pill di mw6-l" src="./assets/img/fiji.jpg">
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="bt b--black-10 bg-jessex-washed-green black-70 ph3 ph5-ns pv4 pv5-ns" id="overview">
+            <div class="mw9 center">
+                <h1 class="mt0 f5 f3-ns">Overview</h1>
+                <p class="f5 lh-copy">
+                    The best thing that can be said about me is that I am married to
+                    <a href="http://clementinejacoby.com" class="blue dim" title="Lemontime">Clementine Jacoby</a>.
+                    <br/>
+                    <br/>
+                    Beyond that, I travel, rebuilt my taste buds from the ground up,
+                    appreciate vistas and will work hard to reach them, am fond of
+                    geographical extremes, get indignant from time to time, have a strong desire
+                    to be considerate, could be a better spatial thinker, am fantastic at arithmetic,
+                    look for meaning in chaos, care about refugees and migrants of all kinds, am a
+                    fan of grand gestures, and try to strike a balance between earnestness and dark humor.
+                </p>
+                <h3 class="f5 f4-ns mt4 fw6">Timeline</h3>
+                <div class="wrapper">
+                <div class="scrolls">
+                <ul id='timeline'>
+                    <li class='work'>
+                        <input class='radio' id='youth' name='works' type='radio' checked>
+                        <div class="relative">
+                            <label for='youth'>Youth</label>
+                            <span class='date'>Birth - 2007</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Grew up in the suburbs of northern Virginia, just outside of Washington, D.C.
+                                Organized sports, Southern food, and a loving family.
+                            </p>
+                        </div>
+                    </li>
+                    <li class='work'>
+                        <input class='radio' id='college' name='works' type='radio'>
+                        <div class="relative">
+                            <label for='college'>College</label>
+                            <span class='date'>2007 - 2011</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Studied Computer Science and replaced many of the thoughts in my
+                                brain at George Mason University.
+                            </p>
+                        </div>
+                    </li>
+                    <li class='work'>
+                        <input class='radio' id='opower' name='works' type='radio'>
+                        <div class="relative">
+                            <label for='opower'>Opower</label>
+                            <span class='date'>June 27, 2011</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Started trying to save the world from climate change at Opower.
+                            </p>
+                        </div>
+                    </li>
+                    <li class='work'>
+                        <input class='radio' id='jetset' name='works' type='radio'>
+                        <div class="relative">
+                            <label for='jetset'>Jetset</label>
+                            <span class='date'>May 2012</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Left the east coast of the United States for the first time, hopping
+                                a plane to London to explore western Europe. This was the most cliché
+                                thing imaginable.
+                            </p>
+                        </div>
+                    </li>
+                    <li class='work'>
+                        <input class='radio' id='clementine' name='works' type='radio'>
+                        <div class="relative">
+                            <label for='clementine'>Clementine</label>
+                            <span class='date'>December 4, 2012</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Crossed paths with Clementine at a circus event. The paths
+                                never uncrossed from there.
+                            </p>
+                        </div>
+                    </li>
+                    <li class='work'>
+                        <input class='radio' id='san-francisco' name='works' type='radio'>
+                        <div class="relative">
+                            <label for='san-francisco'>San Francisco</label>
+                            <span class='date'>May 2013</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Left my life-long home; moved to San Francisco, California.
+                            </p>
+                        </div>
+                    </li>
+                    <li class='work'>
+                        <input class='radio' id='tech-lead' name='works' type='radio'>
+                        <div class="relative">
+                            <label for='tech-lead'>Tech Lead</label>
+                            <span class='date'>April 2014</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Became the Tech Lead for the team that owns the platform
+                                for outbound communications at Opower.
+                            </p>
+                        </div>
+                    </li>
+                    <li class='work'>
+                        <input class='radio' id='seattle' name='works' type='radio'>
+                        <div class="relative">
+                            <label for='seattle'>Seattle</label>
+                            <span class='date'>June 2014</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Moved to Seattle, Washington for a Summer of bungie jumping,
+                                island hopping, pie eating, and water skiing.
+                            </p>
+                        </div>
+                    </li>
+                    <li class='work'>
+                        <input class='radio' id='mentorship' name='works' type='radio'>
+                        <div class="relative">
+                            <label for='mentorship'>Mentorship</label>
+                            <span class='date'>December 2014</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Co-founded the Opower Engineering Mentorship Program, helping to
+                                establish and guide relationships across the community.
+                            </p>
+                        </div>
+                    </li>
+                    <li class='work'>
+                        <input class='radio' id='san-miguel' name='works' type='radio'>
+                        <div class="relative">
+                            <label for='san-miguel'>San Miguel</label>
+                            <span class='date'>June 2015</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Moved to San Miguel de Allende for a Summer of communing Mexico.
+                                Took a much needed break from work and re-balanced.
+                            </p>
+                        </div>
+                    </li>
+                    <li class='work'>
+                        <input class='radio' id='keleti' name='works' type='radio'>
+                        <div class="relative">
+                            <label for='keleti'>Keleti</label>
+                            <span class='date'>August 2015</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Had a front-row ticket to one of the epicenters of the humanitarian
+                                crisis of the century, assisting refugees at Keleti Station in
+                                Budapest.
+                            </p>
+                        </div>
+                    </li>
+                    <li class='work'>
+                        <input class='radio' id='architect' name='works' type='radio'>
+                        <div class="relative">
+                            <label for='architect'>Architect</label>
+                            <span class='date'>January 2016</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Became Architect for the Outbound organization at Opower, guiding
+                                the technical vision for 40 engineers across 6 teams.
+                            </p>
+                        </div>
+                    </li>
+                    <li class='work'>
+                        <input class='radio' id='engaged' name='works' type='radio'>
+                        <div class="relative">
+                            <label for='engaged'>Clementosh</label>
+                            <span class='date'>November 6 2015 - September 6 2016</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Decided to hang out forever with Clementine. Planned and built our
+                                dream wedding at our parents' home in Utah, which included remodeling a
+                                masterpiece of mid-century modern architecture for the occasion.
+                            </p>
+                        </div>
+                    </li>
+                    <li class='work'>
+                        <input class='radio' id='sydney' name='works' type='radio'>
+                        <div class="relative">
+                            <label for='sydney'>Sydney</label>
+                            <span class='date'>September 2016</span>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='content'>
+                            <p>
+                                Moved to Sydney, Australia the day after our wedding, to embark
+                                on an era of surf.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="tl bt b--black-10 cf pa3 pa5-ns bg-jessex-washed-blue black-70" id="abilities">
+            <div class="mw9 center">
+                <h1 class="f5 mt0 f3-ns">Abilities</h1>
+                <p class="f6 f5-ns lh-copy mt0">
+                    These are the things I can stumble my way through.
+                </p>
+                <div class="cf w-100">
+                    <div class="fl w-100 w-50-l pa2">
+                        <h2 class="f5 f4-ns fw6 mb0">Active Skills</h2>
+                        <div id="personalAbilityCanvas" class="canvas-holder">
+                            <div id="personalAbilityLegend"></div>
+                            <canvas id="personalAbility"></canvas>
+                        </div>
+                    </div>
+                    <div class="fl w-100 w-50-l pa2">
+                        <h2 class="f5 f4-ns fw6 mb0">Tech skills</h2>
+                        <div id="technicalAbilityCanvas" class="canvas-holder">
+                            <div id="technicalAbilityLegend"></div>
+                            <canvas id="technicalAbility"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="cf w-100">
+                    <div class="fl w-50-l pa2">
+                        <h2 class="f5 f4-ns fw6 mb0">On the come up</h2>
+                        <p class="pv2 f6 f5-ns measure lh-copy mt0">
+                            Fresh new things I'm learning or working on.
+                        </p>
+                        <table class="border-collapse w-100" cellspacing="0" cellpadding="0">
+                            <tbody class="black-60 f5">
+                            <tr class="hover-bg-light-pink">
+                                <td class="bb b--black-05 jessex-dark-red b pv2">STUDYING</td>
+                                <td class="bb b--black-05 ph4 pv2"><span class="jessex-dark-blue">Machine learning</span></td>
+                            </tr>
+                            <tr class="hover-bg-light-pink">
+                                <td class="bb b--black-05 jessex-dark-red b pv2">READING</td>
+                                <td class="bb b--black-05 ph4 pv2">Everything by <span class="jessex-dark-blue">John Rawls</span></td>
+                            </tr>
+                            <tr class="hover-bg-light-pink">
+                                <td class="bb b--black-05 jessex-dark-red b pv2">SURFING</td>
+                                <td class="bb b--black-05 ph4 pv2">Trying to <span class="jessex-dark-blue">lengthen the wave</span> and improve my agility</td>
+                            </tr>
+                            <tr class="hover-bg-light-pink">
+                                <td class="bb b--black-05 jessex-dark-red b pv2">BUILDING</td>
+                                <td class="bb b--black-05 ph4 pv2">A project to establish and visualize baselines for <span class="jessex-dark-blue">recidivism</span></td>
+                            </tr>
+                            <tr class="hover-bg-light-pink">
+                                <td class="bb b--black-05 jessex-dark-red b pv2">EXPLORING</td>
+                                <td class="bb b--black-05 ph4 pv2">An idea for how to assist <span class="jessex-dark-blue">refugees</span> in flight</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="fl w-50-l pa2">
+                        <h2 class="f5 f4-ns fw6 mb0">10,000 Hour Quest</h2>
+                        <p class="pv2 f6 f5-ns measure lh-copy mt0">
+                            Malcolm Gladwell said mastery requires 10,000 hours. That's not true, but here's my (estimated)
+                            progress anyway.
+                        </p>
+                        <div class="dt-ns dt--fixed-ns">
+                            <div class="dtc-ns v-mid pr4-ns">
+                                <table class="border-collapse w-100" cellspacing="0" cellpadding="0">
+                                    <tbody class="black-60 f5">
+                                    <tr class="hover-bg-light-pink" title="8 hours per day for my entire life (I sleep dopely)">
+                                        <td class="bb b--black-05 bg-jessex-dark-red pa2"></td>
+                                        <td class="bb b--black-05 ph4 jessex-dark-red">Sleeping</td>
+                                        <td class="bb b--black-05">80,000</td>
+                                    </tr>
+                                    <tr class="hover-bg-light-pink" title="40 hours per week, 45 weeks per year for 6 years">
+                                        <td class="bb b--black-05 bg-jessex-red pa2"></td>
+                                        <td class="bb b--black-05 ph4 jessex-red">Engineering</td>
+                                        <td class="bb b--black-05">10,600</td>
+                                    </tr>
+                                    <tr class="hover-bg-light-pink" title="An hour per day for my entire life">
+                                        <td class="bb b--black-05 bg-jessex-red pa2"></td>
+                                        <td class="bb b--black-05 ph4 jessex-red">Eating</td>
+                                        <td class="bb b--black-05">10,000</td>
+                                    </tr>
+                                    <tr class="hover-bg-light-pink" title="30 hours per week through high school, 40 hours per week through undergrad, plus self-guided study since (nothing before high school can be considered studying)">
+                                        <td class="bb b--black-05 bg-jessex-light-red pa2"></td>
+                                        <td class="bb b--black-05 ph4 jessex-light-red">Studying</td>
+                                        <td class="bb b--black-05">9,500</td>
+                                    </tr>
+                                    <tr class="hover-bg-light-pink" title="An hour per day for 12 years, on average, maybe?">
+                                        <td class="bb b--black-05 bg-jessex-light-blue pa2"></td>
+                                        <td class="bb b--black-05 ph4 jessex-light-blue">Driving</td>
+                                        <td class="bb b--black-05">4,380</td>
+                                    </tr>
+                                    <tr class="hover-bg-light-pink" title="10 years of organized play with 10-week seasons, 10 years of semi-regular pickup">
+                                        <td class="bb b--black-05 bg-jessex-blue pa2"></td>
+                                        <td class="bb b--black-05 ph4 jessex-blue">Basketballing</td>
+                                        <td class="bb b--black-05">1,700</td>
+                                    </tr>
+                                    <tr class="hover-bg-light-pink" title="12 years of organized play with 10-week seasons, sporadic play with friends and Dad">
+                                        <td class="bb b--black-05 bg-jessex-blue pa2"></td>
+                                        <td class="bb b--black-05 ph4 jessex-blue">Baseballing</td>
+                                        <td class="bb b--black-05">1,000</td>
+                                    </tr>
+                                    <tr class="hover-bg-light-pink" title="I'm on the comeup!">
+                                        <td class="bb b--black-05 bg-jessex-dark-blue pa2"></td>
+                                        <td class="bb b--black-05 ph4 jessex-dark-blue">Aerial hooping</td>
+                                        <td class="bb b--black-05">50</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="tl bt b--black-10 pa3 pa5-ns bg-jessex-washed-orange black-70" id="core-ideas">
+            <div class="mw9 center">
+                <h1 class="f5 mt0 f3-ns">Core ideas</h1>
+                <p class="f6 f5-ns lh-copy mt0">
+                    These are the ideas I base my actions on.
+                </p>
+                <section class="lh-copy">
+                    <div class="cf w-100">
+                        <article class="fl pv2 w-100 w-third-l pa2">
+                            <h2 class="f5 f4-ns fw6 mb0">Empathy</h2>
+                            <p class="f6 f5-ns measure lh-copy mt0">
+                                Empathy deficiency is at the root of all problems. Empathy is the
+                                most important thing.
+                            </p>
+                        </article>
+                        <article class="fl pv2 w-100 w-third-l pa2">
+                            <h2 class="f5 f4-ns fw6 mb0">Fairness</h2>
+                            <p class="f6 f5-ns measure lh-copy mt0">
+                                We should measure what we do by how it improves the well-being of the
+                                least advantaged members of society.
+                            </p>
+                        </article>
+                        <article class="fl pv2 w-100 w-third-l pa2">
+                            <h2 class="f5 f4-ns fw6 mb0">Privilege</h2>
+                            <p class="f6 f5-ns measure lh-copy mt0">
+                                Those of us with the most privilege have a social duty to help those
+                                with less privilege.
+                            </p>
+                        </article>
+                    </div>
+                    <div class="cf w-100">
+                        <article class="fl pv2 w-100 w-third-l pa2">
+                            <h2 class="f5 f4-ns fw6 mb0">Goodness</h2>
+                            <p class="f6 f5-ns measure lh-copy mt0">
+                                People are naturally Good. They want to be good to others and to
+                                themselves.
+                            </p>
+                        </article>
+                        <article class="fl pv2 w-100 w-third-l pa2">
+                            <h2 class="f5 f4-ns fw6 mb0">Diversity</h2>
+                            <p class="f6 f5-ns measure lh-copy mt0">
+                                Diversity leads to better decisions, higher quality of life,
+                                and stronger organization.
+                            </p>
+                        </article>
+                        <article class="fl pv2 w-100 w-third-l pa2">
+                            <h2 class="f5 f4-ns fw6 mb0 strike">Stigma</h2>
+                            <p class="f6 f5-ns measure lh-copy mt0">
+                                Stigma destroys social cohesion. It dehumanizes and distances us
+                                from one another.
+                            </p>
+                        </article>
+                    </div>
+                    <div class="cf w-100">
+                        <article class="fl pv2 w-100 w-third-l pa2">
+                            <h2 class="f5 f4-ns fw6 mb0">Beauty</h2>
+                            <p class="f6 f5-ns measure lh-copy mt0">
+                                Form follows function, but there is intrinsic social value in
+                                beauty.
+                            </p>
+                        </article>
+                        <article class="fl pv2 w-100 w-third-l pa2">
+                            <h2 class="f5 f4-ns fw6 mb0">Mentorship</h2>
+                            <p class="f6 f5-ns measure lh-copy mt0">
+                                Mentorship within and across communities helps society reinforce
+                                its future.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <section class="tl bt b--black-10 cf pa3 pa5-ns bg-jessex-washed-purple black-70" id="preferences">
+            <div class="mw9 center">
+                <h1 class="f5 mt0 f3-ns" title="and the whole city rate me">Top 5, Top 5, Top 5</h1>
+                <p class="f6 f5-ns lh-copy mt0">
+                    These are the people and works I like, in immutable order.
+                </p>
+                <div class="cf">
+                    <article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+                        <h2 class="f5 f4-ns fw6 mb0">Surrealists</h2>
+                            <ol class="list pl0">
+                            <li>Salvador Dalí</li>
+                            <li>Frida Kahlo</li>
+                            <li>Luis Buñuel</li>
+                            <li>Yves Tanguy</li>
+                            <li>Kevin Barnes</li>
+                            </ol>
+                    </article>
+                    <article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+                        <h2 class="f5 f4-ns fw6 mb0">Modernist designers</h2>
+                        <ol class="list pl0">
+                            <li>Ray & Charles Eames</li>
+                            <li>Joseph Eichler</li>
+                            <li>Hans Wegner</li>
+                            <li>Oscar Neimeyer</li>
+                            <li>Ludwig Mies van der Rohe</li>
+                        </ol>
+                    </article>
+                </div>
+                <div class="cf">
+                    <article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+                        <h2 class="f5 f4-ns fw6 mb0">Kanye West tracks</h2>
+                        <ol class="list pl0">
+                            <li>Blood on the Leaves - <span class = "i">Yeezus</span></li>
+                            <li>Lost in the World - <span class = "i">My Beautiful Dark Twisted Fantasy</span></li>
+                            <li>Flashing Lights - <span class = "i">Graduation</span></li>
+                            <li>Say You Will - <span class = "i">808s & Heartbreak</span></li>
+                            <li>Ultralight Beam - <span class = "i">The Life of Pablo</span></li>
+                        </ol>
+                    </article>
+                    <article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+                        <h2 class="f5 f4-ns fw6 mb0">Ambient musicians</h2>
+                        <ol class="list pl0">
+                            <li>Boards of Canada</li>
+                            <li>Aphex Twin</li>
+                            <li>Jon Hopkins</li>
+                            <li>Autechre</li>
+                            <li>Tim Hecker</li>
+                        </ol>
+                    </article>
+                </div>
+                <div class="cf">
+                    <article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+                        <h2 class="f5 f4-ns fw6 mb0">Novels</h2>
+                        <ol class="list pl0">
+                            <li>The Fall - <span class = "i">Albert Camus</span></li>
+                            <li>Cat's Cradle - <span class = "i">Kurt Vonnegut</span></li>
+                            <li>We - <span class = "i">Yevgeny Zamyatin</span></li>
+                            <li>The Trial - <span class = "i">Franz Kafka</span></li>
+                            <li>Nausea - <span class = "i">Jean-Paul Sartre</span></li>
+                        </ol>
+                    </article>
+                    <article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+                        <h2 class="f5 f4-ns fw6 mb0">Wes Anderson films</h2>
+                        <ol class="list pl0">
+                            <li>The Darjeeling Limited</li>
+                            <li>The Life Aquatic with Steve Zissou</li>
+                            <li>Rushmore</li>
+                            <li>The Grand Budapest Hotel</li>
+                            <li>Moonrise Kingdom</li>
+                        </ol>
+                    </article>
+                </div>
+                <div class="cf">
+                    <article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+                        <h2 class="f5 f4-ns fw6 mb0">Mexican dishes</h2>
+                        <ol class="list pl0">
+                            <li>Gorditas al pastor</li>
+                            <li>Mole poblano</li>
+                            <li>Molcajete</li>
+                            <li>Chiles rellenos</li>
+                            <li>Huevos rancheros</li>
+                        </ol>
+                    </article>
+                    <article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+                        <h2 class="f5 f4-ns fw6 mb0">Chairs</h2>
+                        <ol class="list pl0">
+                            <li>Eames Lounger</li>
+                            <li>Barcelona Chair</li>
+                            <li>Jensen Z Chair</li>
+                            <li>Eames Low Chair Wood</li>
+                            <li>Platner Side Chair</li>
+                        </ol>
+                    </article>
+                </div>
+                <div class="cf">
+                    <article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+                        <h2 class="f5 f4-ns fw6 mb0">Delightful things</h2>
+                        <ol class="list pl0">
+                            <li>Oversized coffee table books</li>
+                            <li>Super dark green ferns</li>
+                            <li>Scented hand lotion</li>
+                            <li>Colorful throw blankets</li>
+                            <li>Fresh-baked cookies</li>
+                        </ol>
+                    </article>
+                    <article class="pv2 fl w-100 w-50-l pr0 pr2-l">
+                        <h2 class="f5 f4-ns fw6 mb0" title="There's only one franchise that matters">Basketballers</h2>
+                        <ol class="list pl0">
+                            <li>Kareem Abdul-Jabbar</li>
+                            <li>Kobe Bryant</li>
+                            <li>Magic Johnson</li>
+                            <li>Shaquille O'Neal</li>
+                            <li>Wilt Chamberlain</li>
+                        </ol>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+
+<footer class="bg-white black-70 ph3 ph5-ns pv5 bt b--black-10">
+    <div class="mw9 center">
+        <div class="lh-copy">
+            <a title="Places you have been" href="#top"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Back up top
+            </a>
+            <a title="Where we started" href="/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Home
+            </a>
+            <a title="Places I have been" href="/places/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Places
+            </a>
+            <a title="Projects I have worked on" href="/projects/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Projects
+            </a>
+            <a title="Photos I have taken" href="/photos/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Photos
+            </a>
+            <a title="Words I have written" href="/words/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Words
+            </a>
+            <a title="Where I do my part" href="/opower/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Opower
+            </a>
+            <a title="What I have done" href="./assets/img/Joshua-Essex-2017-Resume.pdf"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Resume
+            </a>
+        </div>
+        <div class="mt4">
+            <a class="ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3" href="https://www.linkedin.com/in/joshuaessex/" title="Where I link">
+                <div class="w2">
+                    <svg style="fill: #B5DBCE" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"/></svg>
+                </div>
+            </a>
+            <a class="ba br2 black-70 no-underline grow b inline-flex items-center mb3 pv2 ph3" href="https://github.com/jessex" title="Where I git">
+                <div class="w2">
+                    <svg style="fill: #B5DBCE" aria-labelledby="title" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </div>
+            </a>
+        </div>
+        <p class="f6 measure copy lh-copy">
+            Made with <a href="http://tachyons.io/" title="Shout out to some old friends">Tachyons</a> and
+            <a href="http://www.chartjs.org/" title="Chart.js">Chart.js</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>
+<script>
+    // Using ChartJS 1.x here because I don't like the way scaling is performed for radar charts in ChartJS 2.x at the moment
+
+    // personal ability chart
+    var personalAbilityData = {
+        labels: ["Surfing", "Skateboarding", "Basketball", "Circus", "Cycling", "Swimming", "Massage", "Baking", "Gardening", "Reading", "Diving"],
+        datasets: [
+            {
+                label: "% good",
+                fillColor: "rgba(246, 203, 213, 0.4)",
+                strokeColor: "rgba(219, 98, 126,1)",
+                pointColor: "rgba(219, 98, 126,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(219, 98, 126,1)",
+                data: [35, 40, 60, 25, 30, 50, 70, 70, 40, 80]
+            }
+        ]
+    };
+
+    var personalAbility = document.getElementById('personalAbility').getContext('2d');
+    var personalAbilityChart = new Chart(personalAbility).Radar(personalAbilityData, {
+        responsive : true,
+        pointLabelFontFamily : "'avenir next', avenir, sans-serif",
+        pointLabelFontSize : 12,
+        tooltipTemplate: " <%=label%>: <%= value %>% ",
+        legendTemplate : "<ul class=\"graph-legend\"><% for (var i=0; i<datasets.length; i++){%><li><div class=\"comm-how\"></div><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><div class=\"legend-text\"><%if(datasets[i].label){%><%=datasets[i].label%><%}%></div></li><%}%></ul>"
+    });
+
+    legendHolder = document.getElementById('personalAbilityLegend');
+    legendHolder.innerHTML = personalAbilityChart.generateLegend();
+    document.getElementById('personalAbilityLegend').innerHTML = personalAbilityChart.generateLegend();
+
+    // technical ability chart
+    var technicalAbilityData = {
+        labels: ["Data storage", "Delivery", "Testing", "Architecture", "Backend eng", "Frontend eng", "Distributed sys", "Operations", "Scripting"],
+        datasets: [
+            {
+                label: "% good",
+                fillColor: "rgba(181, 219, 206, 0.4)",
+                strokeColor: "rgba(71, 159, 130, 1)",
+                pointColor: "rgba(71, 159, 130, 1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(71, 159, 130, 1)",
+                data: [50, 45, 70, 65, 80, 40, 60, 60, 45]
+            }
+        ]
+    };
+
+    var technicalAbility = document.getElementById('technicalAbility').getContext('2d');
+    var technicalAbilityChart = new Chart(technicalAbility).Radar(technicalAbilityData, {
+        responsive : true,
+        pointLabelFontFamily : "'avenir next', avenir, sans-serif",
+        pointLabelFontSize : 12,
+        tooltipTemplate: " <%=label%>: <%= value %>% ",
+        legendTemplate : "<ul class=\"graph-legend\"><% for (var i=0; i<datasets.length; i++){%><li><div class=\"comm-how\"></div><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><div class=\"legend-text\"><%if(datasets[i].label){%><%=datasets[i].label%><%}%></div></li><%}%></ul>"
+    });
+
+    var legendHolder = document.getElementById('technicalAbilityLegend');
+    legendHolder.innerHTML = technicalAbilityChart.generateLegend();
+    document.getElementById('technicalAbilityLegend').innerHTML = technicalAbilityChart.generateLegend();
+</script>

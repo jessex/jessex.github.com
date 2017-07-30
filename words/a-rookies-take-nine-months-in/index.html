@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        jessex // A Rookie's Take, Nine Months In
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../assets/img/transparent.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css">
+    <link rel="stylesheet" href="../../assets/css/jessex.css">
+    <script type="text/javascript" src="../../assets/js/analytics.js"></script>
+</head>
+
+<body class="w-100 avenir">
+<header class="w-100 pa3 ph5-ns bg-white" id="top">
+    <div class="db dt-ns mw9 center w-100">
+        <div class="db dtc-ns v-mid tl w-50">
+            <a href="/" class="dib f5 f4-ns fw6 mt0 mb1 link black-70" title="Home">
+                Joshua Essex
+            </a>
+        </div>
+        <nav class="db dtc-ns v-mid w-100 tl tr-ns mt2 mt0-ns">
+            <a title="Where we started" href="../../"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Home
+            </a>
+            <a title="Places I have been" href="../../places/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Places
+            </a>
+            <a title="Projects I have worked on" href="../../projects/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Projects
+            </a>
+            <a title="Photos I have taken" href="../../photos/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Photos
+            </a>
+            <a title="Words I have written" href="../../words/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Words
+            </a>
+            <a title="Where I do my part" href="../../opower/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Opower
+            </a>
+            <a title="What I have done" href="../../assets/img/Joshua-Essex-2017-Resume.pdf"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Resume
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main class="w-100 bt b--black-10 bg-white">
+    <section class="bg-black-0125 w-100">
+        <article class="bt b--black-10 bg-white black-70 ph3 ph5-ns pv4 pv5-ns">
+            <h1 class="f4 fw6 f1-ns lh-title measure mt0">A Rookie's Take, Nine Months In <span class="f6 f5-ns black-40 normal pl4">31-03-2012</span></h1>
+            <div class="ph2 pb4 pv2 f6 f5-ns lh-copy mt0">
+                <p>In my roughly nine months as a Software Engineer at the crazy cool <a href="http://opower.com/" title="Opower" target="_blank">Opower</a>, I have learned an enormous amount about, well, everything. The old proverb that claims that you will learn more in a few short weeks on the job than in your entire college education is of course a limited statement; but there is indeed a massive learning acceleration. This is particularly true when making the (increasingly common) transition from Computer Science undergraduate to Software Engineer, when there is a context switch from theory to practice, from the ideal to the pragmatic, which throws you into a sink-or-swim mindset. Hopefully, you will swim; if you do, you stand to learn a ton.</p>
+                <p>But the learning flows in both directions. When coming fresh out of college into your first engineering gig, you will bring a fresh perspective. More eyes, particularly more varied eyes, are always good for self-examination and improvement. At Opower, we work in scrum teams that run about a half dozen deep, with folks ranging from developers to testers to product geniuses. And as individual teams, we have full say over both our product and our process, albeit with some <a href="http://www.heyitsopower.com/culture/opower-engineering-principles/" title="Opower Engineering Principles" target="_blank">general principles</a> and <a href="http://www.heyitsopower.com/culture/engineerings-second-bottom-line/" title="Engineering's Second Bottom Line" target="_blank">guidelines</a> that run throughout Engineering and Product. With such high autonomy and such (relatively) small team size comes increased value in a rookie's insights. </p>
+                <p>With that in mind, I'd like to share my thoughts on a subset of what we practice as Opower engineers, particularly on my own team, which builds a <a href="http://opower.com/what-is-opower/analytics_portal/" title="Opower" target="_blank">pretty sweet web product</a>.</p>
+                <h2 class="f4">Agility</h2>
+                <p>At Opower, agile permeates through much of what we do. We work (with a few exceptions) in three week development iterations: two weeks of development, one week of regression. Of all of the concepts that I have picked up on thus far, <em>iteration</em> is one of the most critical in developing good software, and I've come to value it tremendously. Working in such quick iterative bursts gives us immense flexibility, and allows us to gradually build out our feature set. During "regression week," us engineers are quite busy with a myriad of tasks. At least on my team, it entails work such as planning for the next iteration, re-paying <a href="http://www.codinghorror.com/blog/2009/02/paying-down-your-technical-debt.html" title="Paying Down Your Technical Debt" target="_blank">technical debt</a>, performing cross-team code reviews and, of course, fixing bugs. So every third week, there is allotted time to evaluate both where we have been and where we are going, and to improve. This, I feel, provides stability to a pace that otherwise could spin out of control through its own momentum.</p>
+                <p>And yet, this iteration layout is not always conducive to best practice. My instinct tells me, much more than actual experience does (thankfully), that highlighting a regular block of time as a place where code can be cleaned up and bugs can be fixed (though this also happens during the development phase) can potentially lead to sloppiness. If, in the foreground of your mind, there is the knowledge that there will be an opportunity in the near-future to polish what you're writing now, perhaps it will lead you to rush code to release instead of focusing on writing the best code in the present.</p>
+                <p>It also seems to place the payment of technical debt on a peculiar sort of conceptual island, arbitrarily separating refactoring code from writing code. I feel that the two should be more integrated, to such an extent that technical debt be part of an iteration's commitment. Setting aside a portion of your commitment for technical debt is one way to do this, but a more precise usage of our time would be to commit to specific pieces of technical debt, complete with their own story point estimates. We have begun to do this on my team, and I think it allows us to place more focus on <a href="http://www.informit.com/articles/article.aspx?p=1235624&amp;seqNum=6" title="The Boy Scout Rule">improving our current codebase</a>. </p>
+                <p>Which brings me to the actual process of iteration planning. Over time, the team, spearheaded by our engineering and product leads, breaks down the work for the coming iterations into tickets: individual, atomic pieces of work to be accomplished. Once the time comes to plan for the next iteration, we go through a three-step process: Ticket Review, Estimation and Commitment. Ticket Review is pretty self-explanatory and Commitment, setting a hard goal for the iteration, is a relatively smooth task. I would like to focus a bit on Estimation, however.</p>
+                <p>There seems to be much discussion, historically, about what makes for a <a href="http://leadinganswers.typepad.com/leading_answers/2008/01/top-10-agile-es.html" title="Top 10 Estimation Best Practices" target="_blank">good estimation</a> and what makes for a <a href="http://chrismcmahonsblog.blogspot.com/2010/03/bad-agile-estimation.html" title="Bad Agile Estimation" target="_blank">catastrophic estimation</a>. I suspect it is a bit of a pain point for many Agile thinkers, but I digress. On our team, we typically switch between planning poker and "<a href="https://github.com/opower/estimOtion" title="opower/estimOtion" target="_blank">Estimotion</a>", where tickets are estimated in columns relative to each other. Our tickets are estimated in terms of "story points," an abstract unit of work, and not some concrete value such as an amount of hours. Furthermore, they are estimated in powers of 2, between 1 and 8. This allows us to do some important things:</p>
+                <ul>
+                    <li>Focus on how tickets compare to each other in an easily understood form. This helps us inject a healthy dose of perspective, ie. "Do we really feel this ticket involves twice as much work as this one?"</li>
+                    <li>Account for risk in increasingly large chunks of work. If each discrete step in a story point estimate doubles the previous step, estimates get very high very fast. This is isomorphic to the exponential increase in work that comes from taking on larger and larger efforts.</li>
+                    <li>Generate more consistent estimates, particularly as the overall estimate increases. This is important in establishing a velocity benchmark against which to estimate/commit for future iterations.</li>
+                    <li>Analyze the structure of our tickets. We do not estimate higher than 8 points and if we find that a given ticket appears to call for a greater estimate, it is a sign that the ticket should likely be decomposed into smaller units of work.</li>
+                </ul>
+                <p>I have now been a part of some 13 iterations and, for each one, the team has a) met its commitment, b) estimated relatively accurately (neither vastly under- nor over-committing) and c) established a consistent velocity iteration-over-iteration. I think that this is indicative of both strong leadership and a cohesive team with high self-awareness.</p>
+                <p>There is a great deal more to Agile as a methodology and, more importantly, as a philosophy, and I could write for ages about all of it. But, for now, I'll limit my thoughts on Agile to what I've already stated. I'm still learning a great deal, but so far I can say with confidence that we have constructed an environment that is conducive to building awesome software. At Opower, there is little to no rigidity or convention regarding overall process. Each scrum team maintains autonomy, and in turn flexibility. We are given free reign to determine the best way to build the products that we own, and the resulting software is better for it. I think that this set-up allows us to focus on the people over the process, one of the four tenets of the <a href="http://agilemanifesto.org/" title="Manifesto for Agile Software Development">Manifesto</a>.</p>
+                <p>Though I recognize that this is the only world I've know to this point, it is challenging to imagine working in an environment where the entirety of the engineering team adheres to a strict set of uniform guidelines. It seems like it would be a significant impediment, not to mention joyless.</p>
+                <h2 class="f4">Test Driven Development</h2>
+                <p>In all honesty, I wrote almost no test code for my various projects before joining Opower. On one hand, I thought that my projects were too small to warrant the additional effort. On the other, I simply was not excited by the idea. Well, there's nothing like working in a test-driven environment on a codebase at least 1000x larger than anything you've ever worked on before, building software that gets rapidly deployed into production where it is utilized and scrutinized by millions of people, to get one into a more test-driven mindset.</p>
+                <p>And we have plenty of tools to thoroughly vet our various products.</p>
+                <p>In the average workday, I can typically expect to write unit tests, integration tests and web tests. We have a <a href="http://www.heyitsopower.com/development/our-scala-dsl-for-testing-our-web-product/" title="Our Scala DSL for testing our web product">custom DSL</a>, written in Scala, which is designed to allow us to test our web product in a way that is imminently understandable and concise. It allows us to write code which reads like a description of expected behavior, with messy things such as authentication and page navigation abstracted out of our hands. It's not always an absolute joy to work with, but it is tailor-made for our web product, which I build every day, and empowers us to rapidly write tests with high coverage. Additionally, we utilize a custom-built <a href="http://en.wikipedia.org/wiki/Acceptance_testing#Acceptance_testing_in_Extreme_Programming" title="Acceptance testing in Extreme Programming">acceptance testing</a> framework to thoroughly test the functionality of each new feature and user story. </p>
+                <p>And at each new Innovation Day, developers seem to come up with new tools to improve our test tech stack. Some projects that come to mind are a tool for measuring absolute test/code coverage, a tool for testing the generation of our home energy reports and, as of this week's Innovation Day, a Clojure mini-framework for spinning up DSLs specific to a particular group of tests.</p>
+                <p>With all of these utilities at our disposal, there are plenty of ways to effectively test our code. But these are just means to an end, and the much more important factor in the equation is the person. My experience thus far tells me that a developer who does not have a strong understanding of <em>why</em> s/he is placing an elevated focus on testing will not write quality test code, and the product will suffer as a result. And the <em>why</em> is pretty simple, in my opinion:</p>
+                <p><em>Software, beyond a certain scope, is an inherently fallible system incapable of perfection, with immense complexity on both the micro and macro ends of the scale. Nevertheless, it is generally expected to perform without failure or error. Thus, we must strive to build software which is of as high a quality as possible, and to constantly maintain and improve upon that level of quality. A first-class, organization-wide focus on testing, combined with a systematic approach, is the best way to achieve this goal.</em></p>
+                <p>But my thoughts on the importance of testing are not just high-level philosophic abstractions; indeed, they are based on first-hand experience with bug fixes and, unfortunately yet inevitably, introducing bugs of my own. These experiences led me to adopt test-driven practices, some of which I did not initially know were a part of Test Driven Development. I have taken to such practices as refactoring old code with new tests and writing code test-first (writing a test, be it for a bug fix or a new feature, watching it fail, then writing code to eventually pass the test, which has the awesome effect of preventing the developer from adjusting tests to the code, when in fact code should be adjusted to well-defined tests). </p>
+                <p>Not only can I genuinely state that my own code has improved dramatically as a result of practicing some test-driven methodology, but that I have grown to enjoy writing tests. Testing code at each and every layer, and working in such a way that the code adheres to the tests and not vice versa, inspires confidence in me, the developer, that my product, the software, is high quality. When you feel that you're succeeding and writing good code, you feel a beaming sort of happiness.</p>
+                <p>Of course, the fact that I am by and large writing my own tests is cause for concern. But some layers in our testing framework are implemented and executed by dedicated test engineers, mitigating this concern to some degree. And the fact that each Opower engineer is earnestly testing the code that they write, and that our team as a whole is dedicated to this development philosophy, makes me both confident and happy with our work.</p>
+                <h2 class="f4">Quick Thoughts</h2>
+                <p>I'm fully aware that I can tend toward <a href="http://en.wikipedia.org/wiki/James_joyce" title="Don't begin to care">verbosity</a> in my writing, so allow me to combat that with some quick, bulleted thoughts on a range of topics:</p>
+                <ul>
+                    <li><strong>Code Reviews</strong>: Let it be known that, though I consider myself to be reasonably good at what I do, I know that many of my fellow Opower engineers are light years ahead of me. I work with <em>brilliant</em> people. Mind-bogglingly, von Neumann-esque brilliant. Having them review my code, and having the opportunity to review theirs, is not only beneficial to our codebase but to my own abilities. But I think that it is as much of a gain for the reviewer as it is for the reviewee: jumping out of one's comfort zone to roam around in a foreign stream of code, which at times can feel like exploring a new city on the other side of the globe, forces one to adapt and to consider new approaches and ideas. It's symbiotic.</li>
+                    <li><strong>Integrated Teams</strong>: Our scrum teams are composed of engineers (front- and back-end), test engineers and product managers, all integrated into a meshed, versatile group. As with most things in life, variety in personnel is axiomatically good. When we meet as a team to, say, design a new feature, having all of these different skillsets and areas of expertise in one healthy unit leads to better output. Our product manager can provide insight and direction that the engineers would not otherwise have, our test engineers can help to shape our design choices with regards to testability, and the front- and back-end engineers can cooperate to make sure the overall system is coherent, data is being passed from back to front in the proper format, etc. Fragmenting teams into separate, distinguishable units makes no sense, especially when these teams are designed to completely own a given product. </li>
+                    <li><strong>Bike Shedding</strong>: It's awful, but perhaps inevitable. I have made the mistake of <a href="http://bikeshed.com/" title="Why Should I Care What Color the Bikeshed is?">shedding bikes</a> on more occasions than I would like, which is to say at least once. It has at times been my own fault, but I actively try to just <em>let it go </em>(ironic, yes). I think that perhaps the nature of building something intricate and complex lends itself to trivialities simply because each decision in such a system can be <em>perceived</em> as potentially cascading into something greater. With software, a single line of code can alter the behavior of entire systems and, because we spend so much time on lower levels with these individual lines of impactful code, decisions in the higher level realm of <em>product</em> can be challenging to contemplate. And let's face it: we all have egos. A group of intelligent, strong-willed people with ideas about <em>how to do things right</em> shaped by years of personal experience are likely to clash in opinion; this can easily bleed into the bike shed paint. It takes effort to avoid these conversations, but it's worth it. That's one of the <em>first </em>things that I learned.</li>
+                    <li><strong>Continuous Integration</strong>: My perhaps rash conclusion is that any sufficiently large team working with a sufficiently large codebase that does not utilize continuous integration is doing it wrong. Completely automated building, testing and deployment is an immense time-saver and life-improver, and the technology is sufficiently mature that it should not be a substantial difficulty to maintain. Plus, having a smart system that helps determine who in fact broke the build lets us grant Xs to offenders, a horribly shameful fate that is sure to guarantee that no one ever breaks the build, ever.</li>
+                    <li><strong>Stand-Ups</strong>: Every day at 10:30am, all seven members of my team gather next to our work area, stand in a generally amorphous circle-like shape, and share our status: what we did yesterday, what we will do today and anything else of note, such as any dependencies on the rest of the team or any obstacles impeding our progress. It helps every member of the team to stay on track, allowing the team as a whole to stay in harmony as a singular entity. Personally, I find that actually <em>standing up</em> plays little role: for a team that has been together and consistently successful for a while, a rhythm develops and routine things such as stand-ups tend to lose friction and flow smoothly, with less chance of running on into a full-blown "meeting." One could then argue a case for diminishing returns, that such a team has less and less need for the stand-up as time passes. I would counter that the stand-up is a part of what allows the team to operate so congruously. Just make sure to take in-depth conversations "offline," so as not to turn a stand-up into more than what it should be. Its value is partially in its simplicity and leanness.</li>
+                    <li><strong>Demos</strong>: At Opower, we have nearly a dozen different scrum teams, each working on a different product or initiative. With so many teams, it can be challenging for each individual engineer to stay up-to-date with the latest progress by each team on each product. Thusly, we have a "Demo Day" each iteration wherein the various teams present what they did in the past iteration and provide a glimpse forward into what they're planning to do next. It helps the entirety of Engineering and Product to stay in-tune with both the low-level iteration-by-iteration work and the high-level roadmap progress. Allowing each team to regularly demonstrate its work to the rest of the organization is also a healthy boost of pride, reinforcing how one values their team's work: an easy morale boost for everyone.</li>
+                    <li><strong>Open Floor Plans</strong>: <a href="http://fox-architects.com/blog/post/opower/" title="Opower Energizes The Workplace">Our offices</a> <a href="http://www.arlnow.com/2012/03/21/photos-opowers-sweet-offices-in-courthouse/" title="Opower's Sweet Offices in Courthouse">and amenities</a> <a href="http://inthecapital.com/2012/02/22/an-inside-look-at-the-energy-efficiency-startup-opower-pictures/" title="An Inside Look at the Energy Efficiency Startup Opower">are positively immaculate</a>. We have the world's greatest kitchen, a Lego play area, lounges of various sorts, a mixture of standing and sitting desks, an <a href="http://www.heyitsopower.com/culture/the-birth-of-omama/" title="The Birth of OMAMA">art museum</a>, a library, loveable dogs, lightning fast scooters and, above all else, friendly people. We also have an open floor plan: no cubicles, few actual offices, a lot of wide-open space and sunlight. There's been <a href="http://news.ycombinator.com/item?id=3729302" title="Open-plan offices must die">much debate</a> <a href="https://news.ycombinator.com/item?id=3553853" title="More damaging evidence on open plan offices">about</a> <a href="http://news.ycombinator.com/item?id=1357769" title="The New Office: The Idea and the Floor Plan">open floor plans</a> lately, and I'm mixed in my response thus far. On one hand, I very much enjoy working in such close proximity to not only my own team, but to other engineers from other teams. I enjoy being able to quickly scan the room and see who is around and who isn't, and to sit down in a big open space with beanbag chairs and couches and collaborate. And of course, I love all of the joking and hilarity that ensues from being surrounded by a group of hilarious people. I don't believe that office space that is entirely walled off with offices and cubicles is very conducive to the kind of collaboration and camaraderie that I see at Opower. On the other hand, however, I'd be lying if I said I did not get distracted semi-regularly by all of the people and the noise and the... well... <em>distractions</em>. There are places where I could escape, such as our library, but I often wonder if I would be well served by having a private area (ie. <em>an office</em>) where I <em>know</em> that I could get away from <em>any</em> chance of distraction and slip into the glorious zone.</li>
+                </ul>
+                <h2 class="f4">Conclusions</h2>
+                <p>Conclusion one: I. Am. Having. Fun. Conclusion two: Holy. Bajeezus. Information. Overflow.</p>
+                <p>Writing code and building software that gets released to millions of people with regularity, that is undeniably good for its users and for the planet, is fantastic. Working with smart people is just as great. For some one who enjoys building elegant and useful products, who enjoys a real challenge and has a seemingly insatiable thirst for learning, making software is a wondrous thing. But, even if that thirst really is insatiable, engineering may well come close to quenching it.</p>
+                <p>It is still a nascent field, as are its theoretical underpinnings in Computer Science. Knowledge is created and discoveries are made every day, with new information flowing in with the force of the Niagara. Staying up to date is quite the task, and working in a quick-moving startup means a greater likeliness to stay on the bleeding edge, making this task both more daunting and more important. But to me, that's all part of the fun.</p>
+                <p>Nine months in, and I'm enjoying the ride.</p>
+            </div>
+        </article>
+    </section>
+</main>
+
+<footer class="bg-white black-70 ph3 ph5-ns pv5 bt b--black-10">
+    <div class="mw9 center">
+        <div class="lh-copy">
+            <a title="Places you have been" href="#top"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Back up top
+            </a>
+            <a title="Where we started" href="../../"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Home
+            </a>
+            <a title="Places I have been" href="../../places/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Places
+            </a>
+            <a title="Projects I have worked on" href="../../projects/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Projects
+            </a>
+            <a title="Photos I have taken" href="../../photos/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Photos
+            </a>
+            <a title="Words I have written" href="../../words/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Words
+            </a>
+            <a title="Where I do my part" href="../../opower/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Opower
+            </a>
+            <a title="What I have done" href="../../assets/img/Joshua-Essex-2017-Resume.pdf"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Resume
+            </a>
+        </div>
+        <div class="mt4">
+            <a class="ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3" href="https://www.linkedin.com/in/joshuaessex/" title="Where I link">
+                <div class="w2">
+                    <svg style="fill: #B5DBCE" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"/></svg>
+                </div>
+            </a>
+            <a class="ba br2 black-70 no-underline grow b inline-flex items-center mb3 pv2 ph3" href="https://github.com/jessex" title="Where I git">
+                <div class="w2">
+                    <svg style="fill: #B5DBCE" aria-labelledby="title" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </div>
+            </a>
+        </div>
+        <p class="f6 measure copy lh-copy">
+            Made with <a href="http://tachyons.io/" title="Shout out to some old friends">Tachyons</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

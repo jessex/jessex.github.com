@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        jessex // Euler Problem 029 in Scala
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../assets/img/transparent.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css">
+    <link rel="stylesheet" href="../../assets/css/jessex.css">
+    <script type="text/javascript" src="../../assets/js/analytics.js"></script>
+</head>
+
+<body class="w-100 avenir">
+<header class="w-100 pa3 ph5-ns bg-white" id="top">
+    <div class="db dt-ns mw9 center w-100">
+        <div class="db dtc-ns v-mid tl w-50">
+            <a href="/" class="dib f5 f4-ns fw6 mt0 mb1 link black-70" title="Home">
+                Joshua Essex
+            </a>
+        </div>
+        <nav class="db dtc-ns v-mid w-100 tl tr-ns mt2 mt0-ns">
+            <a title="Where we started" href="../../"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Home
+            </a>
+            <a title="Places I have been" href="../../places/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Places
+            </a>
+            <a title="Projects I have worked on" href="../../projects/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Projects
+            </a>
+            <a title="Photos I have taken" href="../../photos/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Photos
+            </a>
+            <a title="Words I have written" href="../../words/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Words
+            </a>
+            <a title="Where I do my part" href="../../opower/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Opower
+            </a>
+            <a title="What I have done" href="../../assets/img/Joshua-Essex-2017-Resume.pdf"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Resume
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main class="w-100 bt b--black-10 bg-white">
+    <section class="bg-black-0125 w-100">
+        <article class="bt b--black-10 bg-white black-70 ph3 ph5-ns pv4 pv5-ns">
+            <h1 class="f4 fw6 f1-ns lh-title measure mt0">Euler Problem 029 in Scala <span class="f6 f5-ns black-40 normal pl4">04-03-2011</span></h1>
+            <div class="ph2 pb4 pv2 f6 f5-ns lh-copy mt0">
+                <p>Over the last couple of weeks, I've been slowly stepping through the wonderfully difficult problems at <a href="http://projecteuler.net/" title="Project Euler">Project Euler</a>. The problems found at Project Euler form a series  of progressively challenging mathematical questions, totalling 326 and  counting. You can expect questions about everything from counting to  prime factorization to sequence evaluation and beyond. For a great many of the exercises, there is an obvious brute force solution; but the fun is in getting as elegant and clever as you can possibly muster.</p>
+                <p>When I first heard of Project Euler, I signed up and dove right in. The question was not, "Do I want to do this?" or "Do I have the time to work through these?" I was in love with the idea right away. No, the question was, "What language should I tackle these problems with?" Normally, I am not hung up on language choice for any project. I have lost count of how many times I have parroted the old Dijkstra line that goes "Computer science is no more about computers than astronomy is about telescopes" or the similarly framed analogy that programming languages are to engineers as hammers are to carpenters. In short, I think of them as tools. And I would like to think that most problems can be solved by any number of languages. But I would be foolhardy to deny that I prefer some languages to others. My obsession with Python, for instance, is a tad unsettling. And going into a project which so thoroughly tests your mental limits, I wanted to work in a language that would ease the difficulties as much as possible. That's why I chose Scala.</p>
+                <p>Scala is a compelling mix of object orientation and functional programming, providing a flexibility and range of motion that is hard to find elsewhere. It is statically typed, and infers types pretty amazingly, from what I can tell. Initially, I was concerned that there  would be an untold amount of frustration from poor inferences, but the  compiler absolutely protects the coder. It has done so well for me, in  fact, that it has started to reinforce a sense about when to be explicit  and when to be implicit. And this is all well and good, but the functional aspects of the language are what truly intrigued me for this project. The comprehensions, the mapping capabilities, the high-order functions, the built-in pattern matching... they all apply well to purely mathematical pursuits.</p>
+                <p>And aside from all of that, I was/am still new to Scala and felt that this would be an excellent way to hone my skills and knowledge with the language. So I guess you could say that I came for the education but stayed for the tail recursion.</p>
+                <p><a href="http://projecteuler.net/index.php?section=problems&amp;id=29" title="Problem 29">Problem 029</a> is a particularly interesting way to demonstrate Scala's abilities to make life easier. It asks:</p>
+                <div class="problem_content">
+                    <p style="padding-left: 30px;">Consider all integer combinations of <em>a</em><sup><em>b</em></sup> for 2 &le; <em>a</em> &le; 5 and 2 &le; <em>b</em> &le; 5:</p>
+                    <blockquote style="padding-left: 30px;">2<sup>2</sup>=4, 2<sup>3</sup>=8, 2<sup>4</sup>=16, 2<sup>5</sup>=32<br /> 3<sup>2</sup>=9, 3<sup>3</sup>=27, 3<sup>4</sup>=81, 3<sup>5</sup>=243<br /> 4<sup>2</sup>=16, 4<sup>3</sup>=64, 4<sup>4</sup>=256, 4<sup>5</sup>=1024<br /> 5<sup>2</sup>=25, 5<sup>3</sup>=125, 5<sup>4</sup>=625, 5<sup>5</sup>=3125<br /></blockquote>
+                    <p style="padding-left: 30px;">If they are then placed in numerical order, with any repeats removed, we get the following sequence of 15 distinct terms:</p>
+                    <p style="text-align: center; padding-left: 30px;">4, 8, 9, 16, 25, 27, 32, 64, 81, 125, 243, 256, 625, 1024, 3125</p>
+                    <p style="padding-left: 30px;">How many distinct terms are in the sequence generated by <em>a</em><sup><em>b</em></sup> for 2 &le; <em>a</em> &le; 100 and 2 &le; <em>b</em> &le; 100?</p>
+                    <p>So what we're looking at here is a problem in which we will have to a) calculate some quite large numbers, up to 10^200 in fact,&nbsp; b) do these calculations over and over again, precisely 9801 times, and c) determine how many of these terms are unique. This is not the most puzzling or perplexing problem by any stretch of the imagination. But it does display Scala's power and flexibility. One of many possible solutions:</p><script src="https://gist.github.com/855478.js"></script><p>That's it. We defined a function <em>getDistinctCount(Int, Int) </em>which takes in lower and upper bounds (2 and 100 <em>&nbsp;</em>from the problem statement) and returns the number of distinct terms generated by our calculations. Scala provides a wonderful mapping function, which essentially takes a list of elements and individually maps each element by some specified function, returning the new list. In the code, we use <em>map</em> to map all <strong>b</strong> values to <strong>a^b</strong>, a mapping of <em>Int =&gt; Int</em>.</p>
+                    <p>Also take note of the <em>flatMap</em> function, which instead of mapping all elements in the manner of <em>X =&gt; Y</em>, maps them in the manner of <em>X =&gt; Iterable[Y]</em> (<a href="http://richard.dallaway.com/in-praise-of-flatmap" title="In Praise of flatMap">This post</a> by Richard Dallaway is what finally revealed the workings of this function to me). We thus use the <em>flatMap</em> function to map each <strong>a </strong>value to <strong>each respective list</strong> produced by the previous <em>b mapping</em>, and then <strong>flatten</strong> this a-mapping into one list. We then reduce the list into only distinct elements and return the amount of elements in this final list, as seen by the <em>.distinct.size</em> portion of the code. And that integer value is our desired answer.</p>
+                    <p>Basically, the one line of our <em>getDistinctCount</em> function maps each value of <strong>a</strong> to the <em>mapping</em> produced by mapping&nbsp; each value of <strong>b</strong> to <strong>a^b</strong>, and then returns how many unique terms are in that outer, master list. We could have written the entire script in just that one line, actually; the rest is fluff. In more imperative languages, this would have taken some nested for-loops and then some individual calls on the finished product to get our  final value. And for most languages, we would have had to explicitly specify everything, including return type and List types and so on. Here, Scala provided the capabilities to allow us to perform nested mapping in an intuitive manner, with absolutely no obstacles to a clean and simple solution. We just did some basic function calls and list comprehensions and called it a day. Pure fun.</p>
+                    <p>And to handle the large numbers calculated by our exponents, we used the exceedingly handy BigInt type. <em>Thanks, Java.</em></p>
+                </div>
+                <p>But more importantly, thank you Project Euler for helping me to find such interesting and compelling ways to use Scala, one of my new joys in life.</p>
+            </div>
+        </article>
+    </section>
+</main>
+
+<footer class="bg-white black-70 ph3 ph5-ns pv5 bt b--black-10">
+    <div class="mw9 center">
+        <div class="lh-copy">
+            <a title="Places you have been" href="#top"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Back up top
+            </a>
+            <a title="Where we started" href="../../"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Home
+            </a>
+            <a title="Places I have been" href="../../places/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Places
+            </a>
+            <a title="Projects I have worked on" href="../../projects/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Projects
+            </a>
+            <a title="Photos I have taken" href="../../photos/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Photos
+            </a>
+            <a title="Words I have written" href="../../words/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Words
+            </a>
+            <a title="Where I do my part" href="../../opower/"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Opower
+            </a>
+            <a title="What I have done" href="../../assets/img/Joshua-Essex-2017-Resume.pdf"
+               class="f6 fw6 hover-blue link black-70 mr2 mr3-m mr4-l dib">
+                Resume
+            </a>
+        </div>
+        <div class="mt4">
+            <a class="ba black-70 no-underline grow br2 b inline-flex items-center mr3 mb3 pv2 ph3" href="https://www.linkedin.com/in/joshuaessex/" title="Where I link">
+                <div class="w2">
+                    <svg style="fill: #B5DBCE" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"/></svg>
+                </div>
+            </a>
+            <a class="ba br2 black-70 no-underline grow b inline-flex items-center mb3 pv2 ph3" href="https://github.com/jessex" title="Where I git">
+                <div class="w2">
+                    <svg style="fill: #B5DBCE" aria-labelledby="title" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </div>
+            </a>
+        </div>
+        <p class="f6 measure copy lh-copy">
+            Made with <a href="http://tachyons.io/" title="Shout out to some old friends">Tachyons</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>
