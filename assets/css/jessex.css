@@ -18,6 +18,38 @@
     zoom: 1;
 }
 
+@media screen and (max-width: 30em) {
+    .chart-container {
+        position: relative;
+        margin: auto;
+        height: 40vh;
+        width: 160vw;
+    }
+
+    .chart-container-tall {
+        position: relative;
+        margin: auto;
+        height: 70vh;
+        width: 160vw;
+    }
+}
+
+@media screen and (min-width: 30em) and (max-width: 40em) {
+    .chart-container {
+        position: relative;
+        margin: auto;
+        height: 45vh;
+        width: 120vw;
+    }
+
+    .chart-container-tall {
+        position: relative;
+        margin: auto;
+        height: 90vh;
+        width: 120vw;
+    }
+}
+
 .center-project {
     margin: 0 auto;
 }
