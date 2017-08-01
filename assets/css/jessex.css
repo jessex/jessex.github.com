@@ -50,6 +50,27 @@
     }
 }
 
+#map-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+#map-padding {
+    margin-top: 68%;
+}
+#world-map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.datamaps-legend {
+    position: absolute;
+    top: 100%;
+}
+
+
 .center-project {
     margin: 0 auto;
 }
@@ -59,6 +80,7 @@
     margin: 10px auto 0;
     text-align: center;
 }
+
 
 .clemencharts {
     font-family:"Arvo",serif;

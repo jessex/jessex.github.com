@@ -70,14 +70,17 @@
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
                     <script src="../assets/js/datamaps.world.min.js"></script>
-                    <div id="world-map" style="position: relative; width: 100%; max-height: 1000px;"></div>
+                    <div id="map-container">
+                        <div id="map-padding"></div>
+                        <div id="world-map"></div>
+                    </div>
 
                     <script>
                         var map = new Datamap({
                             scope: 'world',
                             element: document.getElementById('world-map'),
+                            responsive: true,
                             projection: 'mercator',
-                            height: 900,
                             fills: {
                                 defaultFill: 'rgba(243, 211, 107, 0.9)',
                                 "Lived": 'rgba(71, 159, 130, 0.9)',
@@ -213,6 +216,10 @@
                         });
 
                         map.legend();
+
+                        window.addEventListener('resize', function() {
+                            map.resize();
+                        });
                     </script>
                 </div>
             </article>
