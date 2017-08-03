@@ -153,35 +153,35 @@
 .bg-abyss {
     background-size: cover;
     background-position: center;
-    background-image: url('../img/abyss.png');
+    background-image: url('//storage.googleapis.com/jessex-images/projects/abyss.png');
 }
 .bg-bye {
     background-size: cover;
     background-position: center;
-    background-image: url('../img/jessex/DSC_8944.jpg');
+    background-image: url('//storage.googleapis.com/jessex-images/projects/DSC_8944.jpg');
 }
 .bg-clementosh {
     background-size: cover;
     background-position: center;
-    background-image: url(../img/clementosh/DSC_8772.jpg);
+    background-image: url('//storage.googleapis.com/jessex-images/clementosh/DSC_8772.jpg');
 }
 .bg-hembakat {
     background-size: cover;
     background-position: center;
-    background-image: url('../img/jessex/IMG_20170721_220355.jpg');
+    background-image: url('//storage.googleapis.com/jessex-images/projects/IMG_20170721_220355.jpg');
 }
 .bg-nursery {
     background-size: cover;
     background-position: center;
-    background-image: url('../img/jessex/IMG_20160127_091619.jpg');
+    background-image: url('//storage.googleapis.com/jessex-images/projects/IMG_20160127_091619.jpg');
 }
 .bg-visual {
     background-size: cover;
     background-position: center;
-    background-image: url('../img/sample.gif');
+    background-image: url('//storage.googleapis.com/jessex-images/projects/sample.gif');
 }
 .bg-volumes {
     background-size: cover;
     background-position: center;
-    background-image: url('../img/volumes.jpg');
+    background-image: url('//storage.googleapis.com/jessex-images/projects/volumes.jpg');
 }
