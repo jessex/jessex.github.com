@@ -92,14 +92,8 @@
     color:#6EC5E9;
 }
 .recidiviz {
-    font-family:'Squada One', sans-serif;
-    color:#C82222;
-}
-.recidiviz-copy {
-    color:#C82222;
-}
-.bg-recidiviz {
-    background-color:#D6D4D3;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#FFFFFF;
 }
 
 
@@ -184,6 +178,12 @@
     background-size: cover;
     background-position: center;
     background-image: url('//storage.googleapis.com/jessex-images/projects/IMG_20160127_091619.jpg');
+}
+.bg-recidiviz {
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/intro.svg');
+    background-color:#4989CA;
 }
 .bg-visual {
     background-size: cover;
